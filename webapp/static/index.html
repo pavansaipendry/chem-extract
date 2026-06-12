@@ -1232,7 +1232,8 @@ function addMsg(role, text, extra) {
   if (extra && extra.sources && extra.sources.length) {
     srcs = '<div class="srcs">' + extra.sources.map(s => {
       const si = srcStore.push(s) - 1;
-      return `<span class="src" data-si="${si}" title="click to view excerpt"><b>${esc(s.source)}</b> · ${esc(s.kind)} · ${s.score}</span>`;
+      const n = s.n ? `[${s.n}] ` : '';
+      return `<span class="src" data-si="${si}" title="click to view excerpt">${n}<b>${esc(s.source)}</b> · ${esc(s.kind)} · ${s.score}</span>`;
     }).join('') + '</div>';
   }
   // minimal markdown fallback: **bold** -> <b>, in case the model slips

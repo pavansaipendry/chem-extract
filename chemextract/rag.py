@@ -252,9 +252,12 @@ User question: {question}"""
     refused = REFUSAL in text
 
     # Only surface the excerpts the answer actually cites ([1], [2], ...).
+    # Each source carries its excerpt number `n` so the UI can show which
+    # bracket in the answer it corresponds to (the numbering is over retrieved
+    # excerpts, not documents — one document yields several chunks).
     # Greetings / meta replies cite nothing -> no source chips at all.
     cited = {int(n) - 1 for n in re.findall(r"\[(\d+)\]", text)}
-    sources = [h for i, h in enumerate(hits) if i in cited] if not refused else []
+    sources = [{**h, "n": i + 1} for i, h in enumerate(hits) if i in cited] if not refused else []
     return {"answer": text, "sources": sources, "refused": refused}
 
 
