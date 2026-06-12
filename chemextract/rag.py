@@ -47,6 +47,8 @@ def _embedder():
 
 def _collection():
     global _client
+    if _client is not None and not STORE_DIR.exists():
+        _client = None  # store dir was deleted under a live client — reconnect fresh
     if _client is None:
         import chromadb
         _client = chromadb.PersistentClient(path=str(STORE_DIR))
