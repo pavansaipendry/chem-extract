@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1520 920" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#64748B"/>
+    </marker>
+  </defs>
+
+  <!-- background -->
+  <rect width="1520" height="920" rx="14" fill="#0B1220"/>
+
+  <!-- header -->
+  <text x="42" y="52" font-size="24" font-weight="700" fill="#F1F5F9">ChemExtract — System Architecture</text>
+  <text x="42" y="78" font-size="14" fill="#94A3B8">flag, don't guess: extraction with provenance, deterministic validation, and a human in the loop</text>
+
+  <!-- ============ BAND 1 : READ ============ -->
+  <text x="42" y="122" font-size="12" font-weight="700" fill="#64748B" letter-spacing="2">1 · READ</text>
+
+  <!-- Document -->
+  <rect x="42" y="134" width="240" height="118" rx="10" fill="#111C33" stroke="#475569" stroke-width="1.5"/>
+  <text x="62" y="166" font-size="15" font-weight="600" fill="#E2E8F0">Document</text>
+  <text x="62" y="190" font-size="12.5" fill="#94A3B8">PNG · JPG · PDF</text>
+  <text x="62" y="210" font-size="12.5" fill="#94A3B8">PDF pages rendered</text>
+  <text x="62" y="228" font-size="12.5" fill="#94A3B8">via PyMuPDF</text>
+
+  <!-- Vision extraction -->
+  <rect x="342" y="134" width="420" height="118" rx="10" fill="#0F1D3A" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="362" y="166" font-size="15" font-weight="600" fill="#93C5FD">Vision extraction × N passes</text>
+  <text x="362" y="190" font-size="12.5" fill="#94A3B8">Claude Opus · schema-enforced output</text>
+  <text x="362" y="210" font-size="12.5" fill="#94A3B8">values verbatim + exact source quote per field</text>
+  <text x="362" y="230" font-size="12.5" fill="#94A3B8">self-reported read confidence 0–1</text>
+
+  <!-- Self-consistency -->
+  <rect x="822" y="134" width="380" height="118" rx="10" fill="#111C33" stroke="#475569" stroke-width="1.5"/>
+  <text x="842" y="166" font-size="15" font-weight="600" fill="#E2E8F0">Self-consistency check</text>
+  <text x="842" y="190" font-size="12.5" fill="#94A3B8">cross-run diff of extracted observations</text>
+  <text x="842" y="210" font-size="12.5" fill="#94A3B8">a field that doesn't reproduce across passes</text>
+  <text x="842" y="230" font-size="12.5" fill="#94A3B8">is flagged — non-reproducing ≠ trusted</text>
+
+  <line x1="282" y1="193" x2="334" y2="193" stroke="#64748B" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="762" y1="193" x2="814" y2="193" stroke="#64748B" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- elbow down to band 2 -->
+  <path d="M 1012 252 L 1012 286 L 282 286 L 282 312" fill="none" stroke="#64748B" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- ============ BAND 2 : VALIDATE & INFER ============ -->
+  <text x="42" y="308" font-size="12" font-weight="700" fill="#64748B" letter-spacing="2">2 · VALIDATE &amp; INFER</text>
+
+  <!-- Deterministic validation -->
+  <rect x="42" y="320" width="480" height="160" rx="10" fill="#0C2421" stroke="#10B981" stroke-width="1.5"/>
+  <text x="62" y="352" font-size="15" font-weight="600" fill="#6EE7B7">Deterministic validation — zero LLM</text>
+  <text x="62" y="376" font-size="12.5" fill="#94A3B8">pure functions only (validate.py)</text>
+  <text x="62" y="398" font-size="12.5" fill="#94A3B8">· unit whitelists for 25+ quantity types</text>
+  <text x="62" y="418" font-size="12.5" fill="#94A3B8">· physical plausibility ranges (70 K = −203 °C → flag)</text>
+  <text x="62" y="438" font-size="12.5" fill="#94A3B8">· unitless rules: pH, absorbance, pKa, K…</text>
+  <text x="62" y="462" font-size="12.5" font-weight="600" fill="#6EE7B7">clean → pass green · ambiguous → flag for review</text>
+
+  <!-- Unit inference -->
+  <rect x="582" y="320" width="430" height="160" rx="10" fill="#0F1D3A" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="602" y="352" font-size="15" font-weight="600" fill="#93C5FD">Unit inference — flagged fields only</text>
+  <text x="602" y="376" font-size="12.5" fill="#94A3B8">full-document context + plausibility table as evidence</text>
+  <text x="602" y="398" font-size="12.5" fill="#94A3B8">proposes the likely unit with calibrated confidence</text>
+  <text x="602" y="418" font-size="12.5" fill="#94A3B8">and human-readable, chemistry-grounded reasoning</text>
+  <text x="602" y="448" font-size="12.5" font-weight="600" fill="#93C5FD">lives in a separate `inferred` layer —</text>
+  <text x="602" y="466" font-size="12.5" font-weight="600" fill="#93C5FD">never overwrites what the page says</text>
+
+  <!-- Reconstruction -->
+  <rect x="1072" y="320" width="406" height="160" rx="10" fill="#0F1D3A" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="1092" y="352" font-size="15" font-weight="600" fill="#93C5FD">Reconstruction</text>
+  <text x="1092" y="376" font-size="12.5" fill="#94A3B8">canonical rewrite of the full document</text>
+  <text x="1092" y="398" font-size="12.5" fill="#94A3B8">inferred insertions marked inline: 70[°C]</text>
+  <text x="1092" y="422" font-size="12.5" fill="#94A3B8">spans chemistry can't settle are returned as</text>
+  <text x="1092" y="442" font-size="12.5" fill="#94A3B8">competing interpretations — most likely first,</text>
+  <text x="1092" y="462" font-size="12.5" fill="#94A3B8">never silently picked</text>
+
+  <line x1="522" y1="400" x2="574" y2="400" stroke="#64748B" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="1012" y1="400" x2="1064" y2="400" stroke="#64748B" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- elbow down to band 3 -->
+  <path d="M 1275 480 L 1275 514 L 222 514 L 222 540" fill="none" stroke="#64748B" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- ============ BAND 3 : REVIEW & ASK ============ -->
+  <text x="42" y="536" font-size="12" font-weight="700" fill="#64748B" letter-spacing="2">3 · REVIEW &amp; ASK</text>
+
+  <!-- Human review -->
+  <rect x="42" y="548" width="360" height="140" rx="10" fill="#291D07" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="62" y="580" font-size="15" font-weight="600" fill="#FCD34D">Human review — web UI</text>
+  <text x="62" y="604" font-size="12.5" fill="#94A3B8">streams every stage live (NDJSON)</text>
+  <text x="62" y="624" font-size="12.5" fill="#94A3B8">reviewer picks between interpretations</text>
+  <text x="62" y="644" font-size="12.5" fill="#94A3B8">and confirms inferred units</text>
+  <text x="62" y="670" font-size="12.5" font-weight="600" fill="#FCD34D">the system never silently decides</text>
+
+  <!-- Final document -->
+  <rect x="462" y="548" width="380" height="140" rx="10" fill="#111C33" stroke="#E2E8F0" stroke-width="1.5"/>
+  <text x="482" y="580" font-size="15" font-weight="600" fill="#F1F5F9">Final document</text>
+  <text x="482" y="604" font-size="12.5" fill="#94A3B8">fully specified — usable downstream</text>
+  <text x="482" y="624" font-size="12.5" fill="#94A3B8">every insertion visibly marked: 85 [°C]</text>
+  <text x="482" y="644" font-size="12.5" fill="#94A3B8">raw vs added is always distinguishable</text>
+  <text x="482" y="670" font-size="12.5" fill="#94A3B8">export as .txt / .json with provenance</text>
+
+  <!-- RAG index -->
+  <rect x="902" y="548" width="270" height="140" rx="10" fill="#1B1433" stroke="#A78BFA" stroke-width="1.5"/>
+  <text x="922" y="580" font-size="15" font-weight="600" fill="#C4B5FD">RAG index</text>
+  <text x="922" y="604" font-size="12.5" fill="#94A3B8">ChromaDB, persistent</text>
+  <text x="922" y="624" font-size="12.5" fill="#94A3B8">local MiniLM embeddings</text>
+  <text x="922" y="648" font-size="12.5" fill="#94A3B8">reviewed version replaces</text>
+  <text x="922" y="668" font-size="12.5" fill="#94A3B8">the raw pre-review chunks</text>
+
+  <!-- Ask your documents -->
+  <rect x="1232" y="548" width="246" height="140" rx="10" fill="#1B1433" stroke="#A78BFA" stroke-width="1.5"/>
+  <text x="1252" y="580" font-size="15" font-weight="600" fill="#C4B5FD">Ask your documents</text>
+  <text x="1252" y="604" font-size="12.5" fill="#94A3B8">answers only from</text>
+  <text x="1252" y="624" font-size="12.5" fill="#94A3B8">indexed sources, cited</text>
+  <text x="1252" y="648" font-size="12.5" fill="#94A3B8">off-topic questions</text>
+  <text x="1252" y="668" font-size="12.5" fill="#94A3B8">are refused</text>
+
+  <line x1="402" y1="618" x2="454" y2="618" stroke="#64748B" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="842" y1="618" x2="894" y2="618" stroke="#64748B" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="1172" y1="618" x2="1224" y2="618" stroke="#64748B" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- ============ LEGEND ============ -->
+  <rect x="42" y="730" width="14" height="14" rx="3" fill="#0F1D3A" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="64" y="742" font-size="12.5" fill="#94A3B8">LLM call (Claude)</text>
+  <rect x="212" y="730" width="14" height="14" rx="3" fill="#0C2421" stroke="#10B981" stroke-width="1.5"/>
+  <text x="234" y="742" font-size="12.5" fill="#94A3B8">deterministic — no LLM</text>
+  <rect x="416" y="730" width="14" height="14" rx="3" fill="#291D07" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="438" y="742" font-size="12.5" fill="#94A3B8">human in the loop</text>
+  <rect x="586" y="730" width="14" height="14" rx="3" fill="#1B1433" stroke="#A78BFA" stroke-width="1.5"/>
+  <text x="608" y="742" font-size="12.5" fill="#94A3B8">storage / retrieval (local, free)</text>
+
+  <!-- ============ METRICS STRIP ============ -->
+  <line x1="42" y1="778" x2="1478" y2="778" stroke="#1E293B" stroke-width="1.5"/>
+
+  <text x="42" y="830" font-size="30" font-weight="700" fill="#6EE7B7">99.8%</text>
+  <text x="42" y="856" font-size="12.5" fill="#94A3B8">flag recall — 406/407 seeded ambiguities caught</text>
+  <text x="42" y="874" font-size="12.5" fill="#94A3B8">(a missed flag = a silent guess reaching a scientist)</text>
+
+  <text x="540" y="830" font-size="30" font-weight="700" fill="#93C5FD">100%</text>
+  <text x="540" y="856" font-size="12.5" fill="#94A3B8">accuracy on unflagged fields — 610/610</text>
+  <text x="540" y="874" font-size="12.5" fill="#94A3B8">(if it doesn't raise its hand, it's right)</text>
+
+  <text x="1040" y="830" font-size="30" font-weight="700" fill="#FCD34D">~$0.10</text>
+  <text x="1040" y="856" font-size="12.5" fill="#94A3B8">per page, full pipeline — 200-image eval,</text>
+  <text x="1040" y="874" font-size="12.5" fill="#94A3B8">1,082 ground-truth fields</text>
+</svg>

@@ -57,26 +57,9 @@ so `unit` is `null` and the field is flagged for human review. The *inference* �
 calibrated confidence and a chemistry-grounded justification a reviewer can evaluate — lives in
 its own sub-object. The system proposes; the human disposes.
 
-## Pipeline
+## Architecture
 
-```
-image/PDF ─► vision extraction ×N ─► self-consistency check ─► deterministic validation
-                (verbatim, schema-       (fields that don't        (unit whitelists, range
-                 enforced, Claude)        reproduce get flagged)    checks — no LLM, pure fns)
-                                                                          │
-            human review ◄─ reconstruction ◄─ unit inference ◄─ flagged fields only
-            (web UI: pick      (canonical rewrite;  (full-document context +
-             between competing  unresolved spans     physical plausibility table;
-             interpretations)   offered as choices)  never overwrites raw)
-                  │
-                  ▼
-            finalized document ─► RAG index (ChromaDB, local embeddings)
-                                       │
-                                       ▼
-                              "Ask your documents" — Q&A answered ONLY from
-                              indexed sources, with citations; the reviewed
-                              final version supersedes the raw transcript
-```
+![ChemExtract system architecture](docs/architecture.svg)
 
 - **Self-consistency:** every page is read N times; observations that don't reproduce across
   runs get `self_consistency_mismatch`.
