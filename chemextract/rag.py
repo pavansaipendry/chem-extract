@@ -45,14 +45,42 @@ def _embedder():
     return _model
 
 
+def _reset_client():
+    """Drop our client AND chroma's internal per-path system cache, so the next
+    _collection() builds a genuinely fresh connection (a plain re-construct can
+    return the same broken cached system)."""
+    global _client
+    _client = None
+    try:
+        from chromadb.api.client import SharedSystemClient
+        SharedSystemClient.clear_system_cache()
+    except Exception:
+        pass
+
+
 def _collection():
     global _client
     if _client is not None and not STORE_DIR.exists():
-        _client = None  # store dir was deleted under a live client — reconnect fresh
+        _reset_client()  # store dir was deleted under a live client
     if _client is None:
         import chromadb
+        STORE_DIR.mkdir(parents=True, exist_ok=True)
         _client = chromadb.PersistentClient(path=str(STORE_DIR))
     return _client.get_or_create_collection(COLLECTION, metadata={"hnsw:space": "cosine"})
+
+
+def _heal(fn):
+    """Retry a store operation once after resetting the client. Covers sqlite
+    'unable to open database file' when the store was deleted mid-process."""
+    def wrapper(*args, **kwargs):
+        try:
+            return fn(*args, **kwargs)
+        except Exception as e:
+            if "unable to open database file" not in str(e):
+                raise
+            _reset_client()
+            return fn(*args, **kwargs)
+    return wrapper
 
 
 def _embed(texts: list[str]) -> list[list[float]]:
@@ -94,6 +122,7 @@ def _observation_lines(observations: list[dict]) -> str:
     return "\n".join(lines)
 
 
+@_heal
 def ingest_document(
     doc_id: str,
     source: str,
@@ -131,6 +160,7 @@ def ingest_document(
     return len(parts)
 
 
+@_heal
 def status() -> dict:
     col = _collection()
     got = col.get(include=["metadatas"])
@@ -142,6 +172,7 @@ def status() -> dict:
 # retrieval + grounded answering
 # --------------------------------------------------------------------------
 
+@_heal
 def search(query: str, k: int = 5) -> list[dict]:
     col = _collection()
     if col.count() == 0:
