@@ -1,0 +1,61 @@
+{
+  "image_id": "chem_0034",
+  "experiment": "Expt 20",
+  "font": "PatrickHand.ttf",
+  "n_fields": 5,
+  "n_ambiguous": 2,
+  "fields": [
+    {
+      "type": "concentration",
+      "raw_value": "0.5",
+      "written_unit": "mol",
+      "true_unit": "molar",
+      "reagent": "NaOH",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 1,
+      "written_text": "0.5 mol NaOH soln"
+    },
+    {
+      "type": "ph",
+      "raw_value": "9",
+      "written_unit": null,
+      "true_unit": "dimensionless",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 2,
+      "written_text": "adjusted pH to 9"
+    },
+    {
+      "type": "temperature",
+      "raw_value": "110",
+      "written_unit": null,
+      "true_unit": "celsius",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 3,
+      "written_text": "Cooled to 110"
+    },
+    {
+      "type": "time",
+      "raw_value": "120",
+      "written_unit": "sec",
+      "true_unit": "minute",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "Heated for 120 sec"
+    },
+    {
+      "type": "volume",
+      "raw_value": "5",
+      "written_unit": null,
+      "true_unit": "milliliter",
+      "reagent": "NaOH",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 5,
+      "written_text": "Added 5 of NaOH"
+    }
+  ]
+}

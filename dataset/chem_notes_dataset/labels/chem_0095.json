@@ -1,0 +1,61 @@
+{
+  "image_id": "chem_0095",
+  "experiment": "Expt 80",
+  "font": "PatrickHand.ttf",
+  "n_fields": 5,
+  "n_ambiguous": 2,
+  "fields": [
+    {
+      "type": "mass",
+      "raw_value": "0.5",
+      "written_unit": null,
+      "true_unit": "gram",
+      "reagent": "Pd/C",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 1,
+      "written_text": "Weighed 0.5 Pd/C"
+    },
+    {
+      "type": "concentration",
+      "raw_value": "6",
+      "written_unit": "mmol",
+      "true_unit": "molar",
+      "reagent": "NaOH",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 2,
+      "written_text": "6 mmol NaOH soln"
+    },
+    {
+      "type": "ph",
+      "raw_value": "5",
+      "written_unit": null,
+      "true_unit": "dimensionless",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 3,
+      "written_text": "adjusted pH to 5"
+    },
+    {
+      "type": "yield",
+      "raw_value": "93",
+      "written_unit": null,
+      "true_unit": "percent",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 4,
+      "written_text": "yield 93"
+    },
+    {
+      "type": "temperature",
+      "raw_value": "150",
+      "written_unit": "\u00b0C",
+      "true_unit": "celsius",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 5,
+      "written_text": "Cooled to 150 \u00b0C"
+    }
+  ]
+}

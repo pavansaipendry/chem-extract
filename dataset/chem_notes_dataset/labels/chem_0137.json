@@ -1,0 +1,50 @@
+{
+  "image_id": "chem_0137",
+  "experiment": "Expt 72",
+  "font": "IndieFlower.ttf",
+  "n_fields": 4,
+  "n_ambiguous": 0,
+  "fields": [
+    {
+      "type": "concentration",
+      "raw_value": "12",
+      "written_unit": "mol",
+      "true_unit": "molar",
+      "reagent": "NaOH",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 1,
+      "written_text": "12 mol NaOH soln"
+    },
+    {
+      "type": "ph",
+      "raw_value": "6",
+      "written_unit": null,
+      "true_unit": "dimensionless",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 2,
+      "written_text": "adjusted pH to 6"
+    },
+    {
+      "type": "yield",
+      "raw_value": "55",
+      "written_unit": "%",
+      "true_unit": "percent",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 3,
+      "written_text": "yield 55%"
+    },
+    {
+      "type": "time",
+      "raw_value": "5",
+      "written_unit": "sec",
+      "true_unit": "minute",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "Refluxed for 5 sec"
+    }
+  ]
+}

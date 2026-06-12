@@ -1,0 +1,51 @@
+{
+  "image_id": "chem_0045",
+  "experiment": "Expt 96",
+  "font": "Caveat.ttf",
+  "n_fields": 4,
+  "n_ambiguous": 2,
+  "fields": [
+    {
+      "type": "volume",
+      "raw_value": "50",
+      "written_unit": null,
+      "true_unit": "milliliter",
+      "reagent": "NaBH4",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 1,
+      "written_text": "Added 50 of NaBH4"
+    },
+    {
+      "type": "temperature",
+      "raw_value": "80",
+      "written_unit": "degC",
+      "true_unit": "celsius",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 2,
+      "written_text": "Heated to 80 degC"
+    },
+    {
+      "type": "time",
+      "raw_value": "5",
+      "written_unit": null,
+      "true_unit": "minute",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 3,
+      "written_text": "Heated for 5"
+    },
+    {
+      "type": "mass",
+      "raw_value": "2.5",
+      "written_unit": "kg",
+      "true_unit": "gram",
+      "reagent": "CuSO4",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "Weighed 2.5 kg CuSO4"
+    }
+  ]
+}

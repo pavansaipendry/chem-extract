@@ -1,0 +1,82 @@
+{
+  "image_id": "chem_0194",
+  "experiment": "Expt 25",
+  "font": "IndieFlower.ttf",
+  "n_fields": 7,
+  "n_ambiguous": 5,
+  "fields": [
+    {
+      "type": "yield",
+      "raw_value": "63",
+      "written_unit": null,
+      "true_unit": "percent",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 1,
+      "written_text": "yield 63"
+    },
+    {
+      "type": "concentration",
+      "raw_value": "6",
+      "written_unit": null,
+      "true_unit": "molar",
+      "reagent": "NaOH",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 2,
+      "written_text": "6 NaOH soln"
+    },
+    {
+      "type": "time",
+      "raw_value": "15",
+      "written_unit": "min",
+      "true_unit": "minute",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 3,
+      "written_text": "Refluxed for 15 min"
+    },
+    {
+      "type": "ph",
+      "raw_value": "6",
+      "written_unit": null,
+      "true_unit": "dimensionless",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "adjusted pH to 6"
+    },
+    {
+      "type": "volume",
+      "raw_value": "1",
+      "written_unit": null,
+      "true_unit": "milliliter",
+      "reagent": "NaHCO3",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 5,
+      "written_text": "Added 1 of NaHCO3"
+    },
+    {
+      "type": "temperature",
+      "raw_value": "78",
+      "written_unit": null,
+      "true_unit": "celsius",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 6,
+      "written_text": "Held to 78"
+    },
+    {
+      "type": "mass",
+      "raw_value": "25",
+      "written_unit": null,
+      "true_unit": "gram",
+      "reagent": "DMF",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 7,
+      "written_text": "Weighed 25 DMF"
+    }
+  ]
+}

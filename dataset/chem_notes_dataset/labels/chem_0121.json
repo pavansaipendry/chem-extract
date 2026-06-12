@@ -1,0 +1,82 @@
+{
+  "image_id": "chem_0121",
+  "experiment": "Expt 27",
+  "font": "ArchitectsDaughter.ttf",
+  "n_fields": 7,
+  "n_ambiguous": 2,
+  "fields": [
+    {
+      "type": "time",
+      "raw_value": "20",
+      "written_unit": null,
+      "true_unit": "minute",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 1,
+      "written_text": "Stirred for 20"
+    },
+    {
+      "type": "concentration",
+      "raw_value": "0.05",
+      "written_unit": "M",
+      "true_unit": "molar",
+      "reagent": "NaCl",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 2,
+      "written_text": "0.05 M NaCl soln"
+    },
+    {
+      "type": "yield",
+      "raw_value": "85",
+      "written_unit": "%",
+      "true_unit": "percent",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 3,
+      "written_text": "yield 85%"
+    },
+    {
+      "type": "ph",
+      "raw_value": "7",
+      "written_unit": null,
+      "true_unit": "dimensionless",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "adjusted pH to 7"
+    },
+    {
+      "type": "mass",
+      "raw_value": "1",
+      "written_unit": null,
+      "true_unit": "gram",
+      "reagent": "DMF",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 5,
+      "written_text": "Weighed 1 DMF"
+    },
+    {
+      "type": "volume",
+      "raw_value": "2",
+      "written_unit": "L",
+      "true_unit": "milliliter",
+      "reagent": "CuSO4",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 6,
+      "written_text": "Added 2 L of CuSO4"
+    },
+    {
+      "type": "temperature",
+      "raw_value": "100",
+      "written_unit": "C",
+      "true_unit": "celsius",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 7,
+      "written_text": "Cooled to 100 C"
+    }
+  ]
+}

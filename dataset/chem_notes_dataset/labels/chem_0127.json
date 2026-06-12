@@ -1,0 +1,72 @@
+{
+  "image_id": "chem_0127",
+  "experiment": "Expt 84",
+  "font": "GloriaHallelujah.ttf",
+  "n_fields": 6,
+  "n_ambiguous": 1,
+  "fields": [
+    {
+      "type": "time",
+      "raw_value": "5",
+      "written_unit": "h",
+      "true_unit": "minute",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 1,
+      "written_text": "Refluxed for 5 h"
+    },
+    {
+      "type": "mass",
+      "raw_value": "5",
+      "written_unit": "mg",
+      "true_unit": "gram",
+      "reagent": "benzaldehyde",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 2,
+      "written_text": "Weighed 5 mg benzaldehyde"
+    },
+    {
+      "type": "volume",
+      "raw_value": "2",
+      "written_unit": "ml",
+      "true_unit": "milliliter",
+      "reagent": "Pd/C",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 3,
+      "written_text": "Added 2 ml of Pd/C"
+    },
+    {
+      "type": "concentration",
+      "raw_value": "0.25",
+      "written_unit": "mol",
+      "true_unit": "molar",
+      "reagent": "NaCl",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "0.25 mol NaCl soln"
+    },
+    {
+      "type": "yield",
+      "raw_value": "93",
+      "written_unit": null,
+      "true_unit": "percent",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 5,
+      "written_text": "yield 93"
+    },
+    {
+      "type": "temperature",
+      "raw_value": "50",
+      "written_unit": "\u00b0C",
+      "true_unit": "celsius",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 6,
+      "written_text": "Held to 50 \u00b0C"
+    }
+  ]
+}

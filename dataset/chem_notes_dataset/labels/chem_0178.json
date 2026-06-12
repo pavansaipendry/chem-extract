@@ -1,0 +1,62 @@
+{
+  "image_id": "chem_0178",
+  "experiment": "Expt 62",
+  "font": "IndieFlower.ttf",
+  "n_fields": 5,
+  "n_ambiguous": 1,
+  "fields": [
+    {
+      "type": "ph",
+      "raw_value": "5",
+      "written_unit": null,
+      "true_unit": "dimensionless",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 1,
+      "written_text": "adjusted pH to 5"
+    },
+    {
+      "type": "concentration",
+      "raw_value": "0.1",
+      "written_unit": "M",
+      "true_unit": "molar",
+      "reagent": "HCl",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 2,
+      "written_text": "0.1 M HCl soln"
+    },
+    {
+      "type": "mass",
+      "raw_value": "5",
+      "written_unit": "mg",
+      "true_unit": "gram",
+      "reagent": "K2CO3",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 3,
+      "written_text": "Weighed 5 mg K2CO3"
+    },
+    {
+      "type": "volume",
+      "raw_value": "250",
+      "written_unit": null,
+      "true_unit": "milliliter",
+      "reagent": "DMF",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 4,
+      "written_text": "Added 250 of DMF"
+    },
+    {
+      "type": "temperature",
+      "raw_value": "100",
+      "written_unit": "C",
+      "true_unit": "celsius",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 5,
+      "written_text": "Cooled to 100 C"
+    }
+  ]
+}

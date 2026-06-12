@@ -1,0 +1,62 @@
+{
+  "image_id": "chem_0099",
+  "experiment": "Expt 45",
+  "font": "PatrickHand.ttf",
+  "n_fields": 5,
+  "n_ambiguous": 0,
+  "fields": [
+    {
+      "type": "volume",
+      "raw_value": "2",
+      "written_unit": "mL",
+      "true_unit": "milliliter",
+      "reagent": "MeOH",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 1,
+      "written_text": "Added 2 mL of MeOH"
+    },
+    {
+      "type": "mass",
+      "raw_value": "0.25",
+      "written_unit": "kg",
+      "true_unit": "gram",
+      "reagent": "phenol",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 2,
+      "written_text": "Weighed 0.25 kg phenol"
+    },
+    {
+      "type": "yield",
+      "raw_value": "55",
+      "written_unit": "%",
+      "true_unit": "percent",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 3,
+      "written_text": "yield 55%"
+    },
+    {
+      "type": "temperature",
+      "raw_value": "78",
+      "written_unit": "C",
+      "true_unit": "celsius",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "Cooled to 78 C"
+    },
+    {
+      "type": "concentration",
+      "raw_value": "6",
+      "written_unit": "mmol",
+      "true_unit": "molar",
+      "reagent": "NaOH",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 5,
+      "written_text": "6 mmol NaOH soln"
+    }
+  ]
+}

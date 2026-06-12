@@ -1,0 +1,62 @@
+{
+  "image_id": "chem_0098",
+  "experiment": "Expt 91",
+  "font": "Caveat.ttf",
+  "n_fields": 5,
+  "n_ambiguous": 2,
+  "fields": [
+    {
+      "type": "yield",
+      "raw_value": "85",
+      "written_unit": null,
+      "true_unit": "percent",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 1,
+      "written_text": "yield 85"
+    },
+    {
+      "type": "volume",
+      "raw_value": "2",
+      "written_unit": "mL",
+      "true_unit": "milliliter",
+      "reagent": "NaHCO3",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 2,
+      "written_text": "Added 2 mL of NaHCO3"
+    },
+    {
+      "type": "mass",
+      "raw_value": "0.05",
+      "written_unit": "mg",
+      "true_unit": "gram",
+      "reagent": "LiAlH4",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 3,
+      "written_text": "Weighed 0.05 mg LiAlH4"
+    },
+    {
+      "type": "temperature",
+      "raw_value": "50",
+      "written_unit": null,
+      "true_unit": "celsius",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 4,
+      "written_text": "Held to 50"
+    },
+    {
+      "type": "concentration",
+      "raw_value": "2",
+      "written_unit": "mol",
+      "true_unit": "molar",
+      "reagent": "HCl",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 5,
+      "written_text": "2 mol HCl soln"
+    }
+  ]
+}

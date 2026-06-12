@@ -1,0 +1,71 @@
+{
+  "image_id": "chem_0093",
+  "experiment": "Expt 86",
+  "font": "Caveat.ttf",
+  "n_fields": 6,
+  "n_ambiguous": 1,
+  "fields": [
+    {
+      "type": "ph",
+      "raw_value": "3",
+      "written_unit": null,
+      "true_unit": "dimensionless",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 1,
+      "written_text": "adjusted pH to 3"
+    },
+    {
+      "type": "yield",
+      "raw_value": "55",
+      "written_unit": "%",
+      "true_unit": "percent",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 2,
+      "written_text": "yield 55%"
+    },
+    {
+      "type": "temperature",
+      "raw_value": "40",
+      "written_unit": "C",
+      "true_unit": "celsius",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 3,
+      "written_text": "Held to 40 C"
+    },
+    {
+      "type": "concentration",
+      "raw_value": "0.05",
+      "written_unit": "mmol",
+      "true_unit": "molar",
+      "reagent": "NaOH",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "0.05 mmol NaOH soln"
+    },
+    {
+      "type": "mass",
+      "raw_value": "0.05",
+      "written_unit": null,
+      "true_unit": "gram",
+      "reagent": "MeOH",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 5,
+      "written_text": "Weighed 0.05 MeOH"
+    },
+    {
+      "type": "time",
+      "raw_value": "4",
+      "written_unit": "sec",
+      "true_unit": "minute",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 6,
+      "written_text": "Refluxed for 4 sec"
+    }
+  ]
+}

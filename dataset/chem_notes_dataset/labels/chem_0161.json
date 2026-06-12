@@ -1,0 +1,51 @@
+{
+  "image_id": "chem_0161",
+  "experiment": "Expt 14",
+  "font": "Kalam.ttf",
+  "n_fields": 4,
+  "n_ambiguous": 1,
+  "fields": [
+    {
+      "type": "volume",
+      "raw_value": "50",
+      "written_unit": "mL",
+      "true_unit": "milliliter",
+      "reagent": "DMF",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 1,
+      "written_text": "Added 50 mL of DMF"
+    },
+    {
+      "type": "ph",
+      "raw_value": "6",
+      "written_unit": null,
+      "true_unit": "dimensionless",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 2,
+      "written_text": "adjusted pH to 6"
+    },
+    {
+      "type": "yield",
+      "raw_value": "55",
+      "written_unit": "%",
+      "true_unit": "percent",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 3,
+      "written_text": "yield 55%"
+    },
+    {
+      "type": "concentration",
+      "raw_value": "12",
+      "written_unit": null,
+      "true_unit": "molar",
+      "reagent": "NaOH",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 4,
+      "written_text": "12 NaOH soln"
+    }
+  ]
+}

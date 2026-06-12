@@ -1,0 +1,82 @@
+{
+  "image_id": "chem_0086",
+  "experiment": "Expt 13",
+  "font": "GloriaHallelujah.ttf",
+  "n_fields": 7,
+  "n_ambiguous": 2,
+  "fields": [
+    {
+      "type": "temperature",
+      "raw_value": "110",
+      "written_unit": "degC",
+      "true_unit": "celsius",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 1,
+      "written_text": "Held to 110 degC"
+    },
+    {
+      "type": "ph",
+      "raw_value": "11",
+      "written_unit": null,
+      "true_unit": "dimensionless",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 2,
+      "written_text": "adjusted pH to 11"
+    },
+    {
+      "type": "yield",
+      "raw_value": "90",
+      "written_unit": "%",
+      "true_unit": "percent",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 3,
+      "written_text": "yield 90%"
+    },
+    {
+      "type": "concentration",
+      "raw_value": "0.25",
+      "written_unit": "mol",
+      "true_unit": "molar",
+      "reagent": "NaOH",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "0.25 mol NaOH soln"
+    },
+    {
+      "type": "time",
+      "raw_value": "30",
+      "written_unit": "min",
+      "true_unit": "minute",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 5,
+      "written_text": "Stirred for 30 min"
+    },
+    {
+      "type": "volume",
+      "raw_value": "15",
+      "written_unit": null,
+      "true_unit": "milliliter",
+      "reagent": "THF",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 6,
+      "written_text": "Added 15 of THF"
+    },
+    {
+      "type": "mass",
+      "raw_value": "0.05",
+      "written_unit": null,
+      "true_unit": "gram",
+      "reagent": "AcOH",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 7,
+      "written_text": "Weighed 0.05 AcOH"
+    }
+  ]
+}

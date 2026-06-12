@@ -1,0 +1,61 @@
+{
+  "image_id": "chem_0012",
+  "experiment": "Expt 51",
+  "font": "Caveat.ttf",
+  "n_fields": 5,
+  "n_ambiguous": 3,
+  "fields": [
+    {
+      "type": "temperature",
+      "raw_value": "0",
+      "written_unit": null,
+      "true_unit": "celsius",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 1,
+      "written_text": "Heated to 0"
+    },
+    {
+      "type": "concentration",
+      "raw_value": "6",
+      "written_unit": null,
+      "true_unit": "molar",
+      "reagent": "NaOH",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 2,
+      "written_text": "6 NaOH soln"
+    },
+    {
+      "type": "yield",
+      "raw_value": "42",
+      "written_unit": "%",
+      "true_unit": "percent",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 3,
+      "written_text": "yield 42%"
+    },
+    {
+      "type": "volume",
+      "raw_value": "250",
+      "written_unit": "L",
+      "true_unit": "milliliter",
+      "reagent": "K2CO3",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "Added 250 L of K2CO3"
+    },
+    {
+      "type": "time",
+      "raw_value": "4",
+      "written_unit": null,
+      "true_unit": "minute",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 5,
+      "written_text": "Stirred for 4"
+    }
+  ]
+}

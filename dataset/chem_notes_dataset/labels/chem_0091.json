@@ -1,0 +1,50 @@
+{
+  "image_id": "chem_0091",
+  "experiment": "Expt 59",
+  "font": "Kalam.ttf",
+  "n_fields": 4,
+  "n_ambiguous": 3,
+  "fields": [
+    {
+      "type": "time",
+      "raw_value": "5",
+      "written_unit": null,
+      "true_unit": "minute",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 1,
+      "written_text": "Stirred for 5"
+    },
+    {
+      "type": "temperature",
+      "raw_value": "60",
+      "written_unit": null,
+      "true_unit": "celsius",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 2,
+      "written_text": "Heated to 60"
+    },
+    {
+      "type": "yield",
+      "raw_value": "63",
+      "written_unit": null,
+      "true_unit": "percent",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 3,
+      "written_text": "yield 63"
+    },
+    {
+      "type": "volume",
+      "raw_value": "15",
+      "written_unit": "ml",
+      "true_unit": "milliliter",
+      "reagent": "phenol",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "Added 15 ml of phenol"
+    }
+  ]
+}

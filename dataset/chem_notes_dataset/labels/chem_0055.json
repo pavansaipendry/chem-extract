@@ -1,0 +1,72 @@
+{
+  "image_id": "chem_0055",
+  "experiment": "Expt 90",
+  "font": "Kalam.ttf",
+  "n_fields": 6,
+  "n_ambiguous": 3,
+  "fields": [
+    {
+      "type": "concentration",
+      "raw_value": "0.25",
+      "written_unit": null,
+      "true_unit": "molar",
+      "reagent": "NaOH",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 1,
+      "written_text": "0.25 NaOH soln"
+    },
+    {
+      "type": "mass",
+      "raw_value": "1.2",
+      "written_unit": null,
+      "true_unit": "gram",
+      "reagent": "AgNO3",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 2,
+      "written_text": "Weighed 1.2 AgNO3"
+    },
+    {
+      "type": "yield",
+      "raw_value": "71",
+      "written_unit": "%",
+      "true_unit": "percent",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 3,
+      "written_text": "yield 71%"
+    },
+    {
+      "type": "ph",
+      "raw_value": "7",
+      "written_unit": null,
+      "true_unit": "dimensionless",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "adjusted pH to 7"
+    },
+    {
+      "type": "volume",
+      "raw_value": "15",
+      "written_unit": null,
+      "true_unit": "milliliter",
+      "reagent": "DMF",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 5,
+      "written_text": "Added 15 of DMF"
+    },
+    {
+      "type": "time",
+      "raw_value": "60",
+      "written_unit": "sec",
+      "true_unit": "minute",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 6,
+      "written_text": "Stirred for 60 sec"
+    }
+  ]
+}

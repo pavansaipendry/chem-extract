@@ -1,0 +1,52 @@
+{
+  "image_id": "chem_0013",
+  "experiment": "Expt 62",
+  "font": "Kalam.ttf",
+  "n_fields": 4,
+  "n_ambiguous": 1,
+  "fields": [
+    {
+      "type": "mass",
+      "raw_value": "50",
+      "written_unit": "kg",
+      "true_unit": "gram",
+      "reagent": "AgNO3",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 1,
+      "written_text": "Weighed 50 kg AgNO3"
+    },
+    {
+      "type": "volume",
+      "raw_value": "100",
+      "written_unit": null,
+      "true_unit": "milliliter",
+      "reagent": "CuSO4",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 2,
+      "written_text": "Added 100 of CuSO4"
+    },
+    {
+      "type": "ph",
+      "raw_value": "10",
+      "written_unit": null,
+      "true_unit": "dimensionless",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 3,
+      "written_text": "adjusted pH to 10"
+    },
+    {
+      "type": "concentration",
+      "raw_value": "0.5",
+      "written_unit": "mol",
+      "true_unit": "molar",
+      "reagent": "NaOH",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "0.5 mol NaOH soln"
+    }
+  ]
+}

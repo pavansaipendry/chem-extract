@@ -1,0 +1,50 @@
+{
+  "image_id": "chem_0145",
+  "experiment": "Expt 7",
+  "font": "ArchitectsDaughter.ttf",
+  "n_fields": 4,
+  "n_ambiguous": 0,
+  "fields": [
+    {
+      "type": "temperature",
+      "raw_value": "-78",
+      "written_unit": "degC",
+      "true_unit": "celsius",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 1,
+      "written_text": "Cooled to -78 degC"
+    },
+    {
+      "type": "ph",
+      "raw_value": "12",
+      "written_unit": null,
+      "true_unit": "dimensionless",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 2,
+      "written_text": "adjusted pH to 12"
+    },
+    {
+      "type": "volume",
+      "raw_value": "1",
+      "written_unit": "L",
+      "true_unit": "milliliter",
+      "reagent": "Pd/C",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 3,
+      "written_text": "Added 1 L of Pd/C"
+    },
+    {
+      "type": "time",
+      "raw_value": "90",
+      "written_unit": "min",
+      "true_unit": "minute",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "Heated for 90 min"
+    }
+  ]
+}

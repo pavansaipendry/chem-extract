@@ -1,0 +1,51 @@
+{
+  "image_id": "chem_0196",
+  "experiment": "Expt 58",
+  "font": "ArchitectsDaughter.ttf",
+  "n_fields": 4,
+  "n_ambiguous": 2,
+  "fields": [
+    {
+      "type": "concentration",
+      "raw_value": "6",
+      "written_unit": null,
+      "true_unit": "molar",
+      "reagent": "AgNO3",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 1,
+      "written_text": "6 AgNO3 soln"
+    },
+    {
+      "type": "ph",
+      "raw_value": "9",
+      "written_unit": null,
+      "true_unit": "dimensionless",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 2,
+      "written_text": "adjusted pH to 9"
+    },
+    {
+      "type": "mass",
+      "raw_value": "5",
+      "written_unit": "kg",
+      "true_unit": "gram",
+      "reagent": "aniline",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 3,
+      "written_text": "Weighed 5 kg aniline"
+    },
+    {
+      "type": "temperature",
+      "raw_value": "-78",
+      "written_unit": null,
+      "true_unit": "celsius",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 4,
+      "written_text": "Cooled to -78"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "image_id": "chem_0118",
+  "experiment": "Expt 52",
+  "font": "ArchitectsDaughter.ttf",
+  "n_fields": 4,
+  "n_ambiguous": 2,
+  "fields": [
+    {
+      "type": "volume",
+      "raw_value": "20",
+      "written_unit": null,
+      "true_unit": "milliliter",
+      "reagent": "HCl",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 1,
+      "written_text": "Added 20 of HCl"
+    },
+    {
+      "type": "mass",
+      "raw_value": "2.5",
+      "written_unit": null,
+      "true_unit": "gram",
+      "reagent": "CuSO4",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 2,
+      "written_text": "Weighed 2.5 CuSO4"
+    },
+    {
+      "type": "ph",
+      "raw_value": "9",
+      "written_unit": null,
+      "true_unit": "dimensionless",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 3,
+      "written_text": "adjusted pH to 9"
+    },
+    {
+      "type": "time",
+      "raw_value": "4",
+      "written_unit": "hr",
+      "true_unit": "minute",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "Heated for 4 hr"
+    }
+  ]
+}

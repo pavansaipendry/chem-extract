@@ -1,0 +1,72 @@
+{
+  "image_id": "chem_0073",
+  "experiment": "Expt 47",
+  "font": "GloriaHallelujah.ttf",
+  "n_fields": 6,
+  "n_ambiguous": 3,
+  "fields": [
+    {
+      "type": "mass",
+      "raw_value": "0.5",
+      "written_unit": "g",
+      "true_unit": "gram",
+      "reagent": "EtOH",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 1,
+      "written_text": "Weighed 0.5 g EtOH"
+    },
+    {
+      "type": "concentration",
+      "raw_value": "0.1",
+      "written_unit": null,
+      "true_unit": "molar",
+      "reagent": "AgNO3",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 2,
+      "written_text": "0.1 AgNO3 soln"
+    },
+    {
+      "type": "temperature",
+      "raw_value": "110",
+      "written_unit": null,
+      "true_unit": "celsius",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 3,
+      "written_text": "Cooled to 110"
+    },
+    {
+      "type": "yield",
+      "raw_value": "90",
+      "written_unit": null,
+      "true_unit": "percent",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 4,
+      "written_text": "yield 90"
+    },
+    {
+      "type": "volume",
+      "raw_value": "15",
+      "written_unit": "L",
+      "true_unit": "milliliter",
+      "reagent": "Pd/C",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 5,
+      "written_text": "Added 15 L of Pd/C"
+    },
+    {
+      "type": "time",
+      "raw_value": "120",
+      "written_unit": "min",
+      "true_unit": "minute",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 6,
+      "written_text": "Heated for 120 min"
+    }
+  ]
+}

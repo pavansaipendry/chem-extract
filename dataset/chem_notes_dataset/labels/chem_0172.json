@@ -1,0 +1,51 @@
+{
+  "image_id": "chem_0172",
+  "experiment": "Expt 11",
+  "font": "Kalam.ttf",
+  "n_fields": 4,
+  "n_ambiguous": 0,
+  "fields": [
+    {
+      "type": "ph",
+      "raw_value": "10",
+      "written_unit": null,
+      "true_unit": "dimensionless",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 1,
+      "written_text": "adjusted pH to 10"
+    },
+    {
+      "type": "mass",
+      "raw_value": "5",
+      "written_unit": "g",
+      "true_unit": "gram",
+      "reagent": "Et3N",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 2,
+      "written_text": "Weighed 5 g Et3N"
+    },
+    {
+      "type": "temperature",
+      "raw_value": "40",
+      "written_unit": "\u00b0C",
+      "true_unit": "celsius",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 3,
+      "written_text": "Cooled to 40 \u00b0C"
+    },
+    {
+      "type": "volume",
+      "raw_value": "25",
+      "written_unit": "ml",
+      "true_unit": "milliliter",
+      "reagent": "NaBH4",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "Added 25 ml of NaBH4"
+    }
+  ]
+}

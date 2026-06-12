@@ -1,0 +1,62 @@
+{
+  "image_id": "chem_0077",
+  "experiment": "Expt 89",
+  "font": "GloriaHallelujah.ttf",
+  "n_fields": 5,
+  "n_ambiguous": 2,
+  "fields": [
+    {
+      "type": "temperature",
+      "raw_value": "50",
+      "written_unit": "\u00b0C",
+      "true_unit": "celsius",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 1,
+      "written_text": "Held to 50 \u00b0C"
+    },
+    {
+      "type": "concentration",
+      "raw_value": "12",
+      "written_unit": null,
+      "true_unit": "molar",
+      "reagent": "H2SO4",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 2,
+      "written_text": "12 H2SO4 soln"
+    },
+    {
+      "type": "mass",
+      "raw_value": "10",
+      "written_unit": "kg",
+      "true_unit": "gram",
+      "reagent": "aniline",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 3,
+      "written_text": "Weighed 10 kg aniline"
+    },
+    {
+      "type": "volume",
+      "raw_value": "1",
+      "written_unit": "ml",
+      "true_unit": "milliliter",
+      "reagent": "DMF",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "Added 1 ml of DMF"
+    },
+    {
+      "type": "time",
+      "raw_value": "2",
+      "written_unit": null,
+      "true_unit": "minute",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 5,
+      "written_text": "Stirred for 2"
+    }
+  ]
+}

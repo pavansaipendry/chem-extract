@@ -1,0 +1,51 @@
+{
+  "image_id": "chem_0191",
+  "experiment": "Expt 85",
+  "font": "PatrickHand.ttf",
+  "n_fields": 4,
+  "n_ambiguous": 1,
+  "fields": [
+    {
+      "type": "ph",
+      "raw_value": "1",
+      "written_unit": null,
+      "true_unit": "dimensionless",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 1,
+      "written_text": "adjusted pH to 1"
+    },
+    {
+      "type": "mass",
+      "raw_value": "5",
+      "written_unit": "g",
+      "true_unit": "gram",
+      "reagent": "H2SO4",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 2,
+      "written_text": "Weighed 5 g H2SO4"
+    },
+    {
+      "type": "volume",
+      "raw_value": "100",
+      "written_unit": null,
+      "true_unit": "milliliter",
+      "reagent": "Et3N",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 3,
+      "written_text": "Added 100 of Et3N"
+    },
+    {
+      "type": "time",
+      "raw_value": "20",
+      "written_unit": "h",
+      "true_unit": "minute",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "Heated for 20 h"
+    }
+  ]
+}

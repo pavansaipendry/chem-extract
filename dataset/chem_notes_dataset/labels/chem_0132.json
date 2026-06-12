@@ -1,0 +1,61 @@
+{
+  "image_id": "chem_0132",
+  "experiment": "Expt 13",
+  "font": "IndieFlower.ttf",
+  "n_fields": 5,
+  "n_ambiguous": 1,
+  "fields": [
+    {
+      "type": "temperature",
+      "raw_value": "95",
+      "written_unit": null,
+      "true_unit": "celsius",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 1,
+      "written_text": "Heated to 95"
+    },
+    {
+      "type": "mass",
+      "raw_value": "10",
+      "written_unit": "kg",
+      "true_unit": "gram",
+      "reagent": "AgNO3",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 2,
+      "written_text": "Weighed 10 kg AgNO3"
+    },
+    {
+      "type": "time",
+      "raw_value": "30",
+      "written_unit": "min",
+      "true_unit": "minute",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 3,
+      "written_text": "Heated for 30 min"
+    },
+    {
+      "type": "concentration",
+      "raw_value": "0.1",
+      "written_unit": "mmol",
+      "true_unit": "molar",
+      "reagent": "NaOH",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "0.1 mmol NaOH soln"
+    },
+    {
+      "type": "ph",
+      "raw_value": "10",
+      "written_unit": null,
+      "true_unit": "dimensionless",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 5,
+      "written_text": "adjusted pH to 10"
+    }
+  ]
+}

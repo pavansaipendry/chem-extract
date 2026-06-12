@@ -1,0 +1,71 @@
+{
+  "image_id": "chem_0189",
+  "experiment": "Expt 67",
+  "font": "PatrickHand.ttf",
+  "n_fields": 6,
+  "n_ambiguous": 2,
+  "fields": [
+    {
+      "type": "mass",
+      "raw_value": "0.05",
+      "written_unit": null,
+      "true_unit": "gram",
+      "reagent": "NaBH4",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 1,
+      "written_text": "Weighed 0.05 NaBH4"
+    },
+    {
+      "type": "time",
+      "raw_value": "90",
+      "written_unit": "h",
+      "true_unit": "minute",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 2,
+      "written_text": "Stirred for 90 h"
+    },
+    {
+      "type": "volume",
+      "raw_value": "10",
+      "written_unit": "L",
+      "true_unit": "milliliter",
+      "reagent": "NaCl",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 3,
+      "written_text": "Added 10 L of NaCl"
+    },
+    {
+      "type": "ph",
+      "raw_value": "13",
+      "written_unit": null,
+      "true_unit": "dimensionless",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "adjusted pH to 13"
+    },
+    {
+      "type": "temperature",
+      "raw_value": "150",
+      "written_unit": "\u00b0C",
+      "true_unit": "celsius",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 5,
+      "written_text": "Held to 150 \u00b0C"
+    },
+    {
+      "type": "yield",
+      "raw_value": "78",
+      "written_unit": null,
+      "true_unit": "percent",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 6,
+      "written_text": "yield 78"
+    }
+  ]
+}

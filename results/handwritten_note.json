@@ -1,0 +1,114 @@
+{
+  "source_image": "eval/images/handwritten_note.png",
+  "transcript": "Run #7 - recrystallization\ndissolved 2.5 g KNO3 in 40 ml water\nheated to 85, stirred 15 min\nadded 0.5 HCl dropwise -> pH 3\ncooled in ice bath to 5 c, 45 min\nyield: 1.8",
+  "observations": [
+    {
+      "quantity_type": "mass",
+      "value": "2.5",
+      "unit": "g",
+      "quote": "dissolved 2.5 g KNO3",
+      "confidence": 0.98,
+      "flags": [],
+      "inferred": null,
+      "needs_review": false
+    },
+    {
+      "quantity_type": "volume",
+      "value": "40",
+      "unit": "ml",
+      "quote": "in 40 ml water",
+      "confidence": 0.98,
+      "flags": [],
+      "inferred": null,
+      "needs_review": false
+    },
+    {
+      "quantity_type": "temperature",
+      "value": "85",
+      "unit": null,
+      "quote": "heated to 85, stirred",
+      "confidence": 0.97,
+      "flags": [
+        "missing_unit"
+      ],
+      "inferred": {
+        "unit": "°C",
+        "confidence": 0.85,
+        "reasoning": "The document explicitly uses Celsius elsewhere for temperature ('cooled in ice bath to 5 c'), strongly indicating the author records temperatures in Celsius. 'Heated to 85' °C is a chemically plausible heating step for an aqueous recrystallization (below water's boiling point). Kelvin is implausible (85 K = -188 °C is not 'heating'). Fahrenheit is possible in principle but inconsistent with the explicit 'c' used for the cooling step, so Celsius is the most defensible inference."
+      },
+      "needs_review": true
+    },
+    {
+      "quantity_type": "time",
+      "value": "15",
+      "unit": "min",
+      "quote": "stirred 15 min",
+      "confidence": 0.98,
+      "flags": [],
+      "inferred": null,
+      "needs_review": false
+    },
+    {
+      "quantity_type": "volume",
+      "value": "0.5",
+      "unit": null,
+      "quote": "added 0.5 HCl dropwise",
+      "confidence": 0.95,
+      "flags": [
+        "missing_unit"
+      ],
+      "inferred": {
+        "unit": "ml",
+        "confidence": 0.8,
+        "reasoning": "The flagged value is a liquid volume of HCl added dropwise. The only other explicit volume in the document uses 'ml' ('40 ml water'), establishing ml as the document's working volume unit. A dropwise addition of 0.5 ml is consistent with small bench-scale additions, whereas 0.5 L would be implausibly large relative to the 40 ml of water and 'dropwise' descriptor, and 0.5 µl is far too small to add dropwise meaningfully. Confidence is high but not maximal because the unit is not stated for this value and dropwise additions are sometimes counted in drops rather than ml."
+      },
+      "needs_review": true
+    },
+    {
+      "quantity_type": "ph",
+      "value": "3",
+      "unit": null,
+      "quote": "-> pH 3",
+      "confidence": 0.97,
+      "flags": [],
+      "inferred": null,
+      "needs_review": false
+    },
+    {
+      "quantity_type": "temperature",
+      "value": "5",
+      "unit": "c",
+      "quote": "to 5 c, 45 min",
+      "confidence": 0.96,
+      "flags": [],
+      "inferred": null,
+      "needs_review": false
+    },
+    {
+      "quantity_type": "time",
+      "value": "45",
+      "unit": "min",
+      "quote": "to 5 c, 45 min",
+      "confidence": 0.97,
+      "flags": [],
+      "inferred": null,
+      "needs_review": false
+    },
+    {
+      "quantity_type": "mass",
+      "value": "1.8",
+      "unit": null,
+      "quote": "yield: 1.8",
+      "confidence": 0.97,
+      "flags": [
+        "missing_unit"
+      ],
+      "inferred": {
+        "unit": "g",
+        "confidence": 0.82,
+        "reasoning": "The yield is a mass quantity from a recrystallization of KNO3, where the starting material was 2.5 g. A yield of 1.8 g is a chemically sensible recovery (~72%) from 2.5 g of input. Other masses in the document are reported in grams (2.5 g KNO3), strongly suggesting the same unit convention applies to the yield. Milligram or kilogram scales would be inconsistent with a bench-scale recrystallization starting from 2.5 g. While the unit is not explicitly stated for the yield, the document context (gram-scale prep, gram-labeled reagent) makes grams the most defensible inference."
+      },
+      "needs_review": true
+    }
+  ]
+}

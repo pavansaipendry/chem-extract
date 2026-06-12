@@ -1,0 +1,51 @@
+{
+  "image_id": "chem_0105",
+  "experiment": "Expt 58",
+  "font": "IndieFlower.ttf",
+  "n_fields": 4,
+  "n_ambiguous": 3,
+  "fields": [
+    {
+      "type": "temperature",
+      "raw_value": "95",
+      "written_unit": null,
+      "true_unit": "celsius",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 1,
+      "written_text": "Heated to 95"
+    },
+    {
+      "type": "volume",
+      "raw_value": "15",
+      "written_unit": null,
+      "true_unit": "milliliter",
+      "reagent": "THF",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 2,
+      "written_text": "Added 15 of THF"
+    },
+    {
+      "type": "ph",
+      "raw_value": "7",
+      "written_unit": null,
+      "true_unit": "dimensionless",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 3,
+      "written_text": "adjusted pH to 7"
+    },
+    {
+      "type": "mass",
+      "raw_value": "1.2",
+      "written_unit": null,
+      "true_unit": "gram",
+      "reagent": "THF",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 4,
+      "written_text": "Weighed 1.2 THF"
+    }
+  ]
+}

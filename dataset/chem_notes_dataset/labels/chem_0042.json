@@ -1,0 +1,72 @@
+{
+  "image_id": "chem_0042",
+  "experiment": "Expt 41",
+  "font": "ArchitectsDaughter.ttf",
+  "n_fields": 6,
+  "n_ambiguous": 1,
+  "fields": [
+    {
+      "type": "mass",
+      "raw_value": "50",
+      "written_unit": "kg",
+      "true_unit": "gram",
+      "reagent": "LiAlH4",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 1,
+      "written_text": "Weighed 50 kg LiAlH4"
+    },
+    {
+      "type": "concentration",
+      "raw_value": "6",
+      "written_unit": "M",
+      "true_unit": "molar",
+      "reagent": "NaOH",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 2,
+      "written_text": "6 M NaOH soln"
+    },
+    {
+      "type": "temperature",
+      "raw_value": "78",
+      "written_unit": "degC",
+      "true_unit": "celsius",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 3,
+      "written_text": "Held to 78 degC"
+    },
+    {
+      "type": "yield",
+      "raw_value": "42",
+      "written_unit": "%",
+      "true_unit": "percent",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "yield 42%"
+    },
+    {
+      "type": "volume",
+      "raw_value": "2",
+      "written_unit": null,
+      "true_unit": "milliliter",
+      "reagent": "H2SO4",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 5,
+      "written_text": "Added 2 of H2SO4"
+    },
+    {
+      "type": "ph",
+      "raw_value": "4",
+      "written_unit": null,
+      "true_unit": "dimensionless",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 6,
+      "written_text": "adjusted pH to 4"
+    }
+  ]
+}

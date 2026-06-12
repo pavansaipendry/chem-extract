@@ -1,0 +1,71 @@
+{
+  "image_id": "chem_0056",
+  "experiment": "Expt 98",
+  "font": "IndieFlower.ttf",
+  "n_fields": 6,
+  "n_ambiguous": 2,
+  "fields": [
+    {
+      "type": "mass",
+      "raw_value": "0.25",
+      "written_unit": null,
+      "true_unit": "gram",
+      "reagent": "NaCl",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 1,
+      "written_text": "Weighed 0.25 NaCl"
+    },
+    {
+      "type": "volume",
+      "raw_value": "15",
+      "written_unit": "L",
+      "true_unit": "milliliter",
+      "reagent": "NaHCO3",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 2,
+      "written_text": "Added 15 L of NaHCO3"
+    },
+    {
+      "type": "yield",
+      "raw_value": "90",
+      "written_unit": null,
+      "true_unit": "percent",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 3,
+      "written_text": "yield 90"
+    },
+    {
+      "type": "time",
+      "raw_value": "120",
+      "written_unit": "sec",
+      "true_unit": "minute",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "Stirred for 120 sec"
+    },
+    {
+      "type": "ph",
+      "raw_value": "3",
+      "written_unit": null,
+      "true_unit": "dimensionless",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 5,
+      "written_text": "adjusted pH to 3"
+    },
+    {
+      "type": "temperature",
+      "raw_value": "110",
+      "written_unit": "degC",
+      "true_unit": "celsius",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 6,
+      "written_text": "Cooled to 110 degC"
+    }
+  ]
+}

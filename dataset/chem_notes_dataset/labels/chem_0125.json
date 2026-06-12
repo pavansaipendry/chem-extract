@@ -1,0 +1,82 @@
+{
+  "image_id": "chem_0125",
+  "experiment": "Expt 24",
+  "font": "ArchitectsDaughter.ttf",
+  "n_fields": 7,
+  "n_ambiguous": 5,
+  "fields": [
+    {
+      "type": "volume",
+      "raw_value": "1",
+      "written_unit": null,
+      "true_unit": "milliliter",
+      "reagent": "MeOH",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 1,
+      "written_text": "Added 1 of MeOH"
+    },
+    {
+      "type": "ph",
+      "raw_value": "12",
+      "written_unit": null,
+      "true_unit": "dimensionless",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 2,
+      "written_text": "adjusted pH to 12"
+    },
+    {
+      "type": "yield",
+      "raw_value": "55",
+      "written_unit": null,
+      "true_unit": "percent",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 3,
+      "written_text": "yield 55"
+    },
+    {
+      "type": "time",
+      "raw_value": "5",
+      "written_unit": null,
+      "true_unit": "minute",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 4,
+      "written_text": "Heated for 5"
+    },
+    {
+      "type": "mass",
+      "raw_value": "0.25",
+      "written_unit": null,
+      "true_unit": "gram",
+      "reagent": "H2SO4",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 5,
+      "written_text": "Weighed 0.25 H2SO4"
+    },
+    {
+      "type": "concentration",
+      "raw_value": "1",
+      "written_unit": null,
+      "true_unit": "molar",
+      "reagent": "HCl",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 6,
+      "written_text": "1 HCl soln"
+    },
+    {
+      "type": "temperature",
+      "raw_value": "60",
+      "written_unit": "degC",
+      "true_unit": "celsius",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 7,
+      "written_text": "Held to 60 degC"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "image_id": "chem_0120",
+  "experiment": "Expt 43",
+  "font": "Caveat.ttf",
+  "n_fields": 7,
+  "n_ambiguous": 4,
+  "fields": [
+    {
+      "type": "yield",
+      "raw_value": "63",
+      "written_unit": null,
+      "true_unit": "percent",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 1,
+      "written_text": "yield 63"
+    },
+    {
+      "type": "time",
+      "raw_value": "5",
+      "written_unit": null,
+      "true_unit": "minute",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 2,
+      "written_text": "Stirred for 5"
+    },
+    {
+      "type": "ph",
+      "raw_value": "3",
+      "written_unit": null,
+      "true_unit": "dimensionless",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 3,
+      "written_text": "adjusted pH to 3"
+    },
+    {
+      "type": "temperature",
+      "raw_value": "110",
+      "written_unit": "C",
+      "true_unit": "celsius",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "Held to 110 C"
+    },
+    {
+      "type": "mass",
+      "raw_value": "1",
+      "written_unit": "g",
+      "true_unit": "gram",
+      "reagent": "MeOH",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 5,
+      "written_text": "Weighed 1 g MeOH"
+    },
+    {
+      "type": "volume",
+      "raw_value": "5",
+      "written_unit": null,
+      "true_unit": "milliliter",
+      "reagent": "NaCl",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 6,
+      "written_text": "Added 5 of NaCl"
+    },
+    {
+      "type": "concentration",
+      "raw_value": "6",
+      "written_unit": null,
+      "true_unit": "molar",
+      "reagent": "NaCl",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 7,
+      "written_text": "6 NaCl soln"
+    }
+  ]
+}

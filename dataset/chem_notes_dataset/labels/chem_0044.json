@@ -1,0 +1,62 @@
+{
+  "image_id": "chem_0044",
+  "experiment": "Expt 5",
+  "font": "Caveat.ttf",
+  "n_fields": 5,
+  "n_ambiguous": 3,
+  "fields": [
+    {
+      "type": "yield",
+      "raw_value": "42",
+      "written_unit": "%",
+      "true_unit": "percent",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 1,
+      "written_text": "yield 42%"
+    },
+    {
+      "type": "temperature",
+      "raw_value": "60",
+      "written_unit": null,
+      "true_unit": "celsius",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 2,
+      "written_text": "Cooled to 60"
+    },
+    {
+      "type": "mass",
+      "raw_value": "1.2",
+      "written_unit": null,
+      "true_unit": "gram",
+      "reagent": "KMnO4",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 3,
+      "written_text": "Weighed 1.2 KMnO4"
+    },
+    {
+      "type": "concentration",
+      "raw_value": "12",
+      "written_unit": "mmol",
+      "true_unit": "molar",
+      "reagent": "AgNO3",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "12 mmol AgNO3 soln"
+    },
+    {
+      "type": "volume",
+      "raw_value": "20",
+      "written_unit": null,
+      "true_unit": "milliliter",
+      "reagent": "THF",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 5,
+      "written_text": "Added 20 of THF"
+    }
+  ]
+}

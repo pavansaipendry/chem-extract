@@ -1,0 +1,50 @@
+{
+  "image_id": "chem_0005",
+  "experiment": "Expt 29",
+  "font": "PatrickHand.ttf",
+  "n_fields": 4,
+  "n_ambiguous": 0,
+  "fields": [
+    {
+      "type": "mass",
+      "raw_value": "0.05",
+      "written_unit": "mg",
+      "true_unit": "gram",
+      "reagent": "NaBH4",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 1,
+      "written_text": "Weighed 0.05 mg NaBH4"
+    },
+    {
+      "type": "yield",
+      "raw_value": "85",
+      "written_unit": "%",
+      "true_unit": "percent",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 2,
+      "written_text": "yield 85%"
+    },
+    {
+      "type": "temperature",
+      "raw_value": "25",
+      "written_unit": "degC",
+      "true_unit": "celsius",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 3,
+      "written_text": "Heated to 25 degC"
+    },
+    {
+      "type": "time",
+      "raw_value": "10",
+      "written_unit": "hr",
+      "true_unit": "minute",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "Refluxed for 10 hr"
+    }
+  ]
+}

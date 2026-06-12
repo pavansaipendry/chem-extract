@@ -1,0 +1,51 @@
+{
+  "image_id": "chem_0138",
+  "experiment": "Expt 14",
+  "font": "PatrickHand.ttf",
+  "n_fields": 4,
+  "n_ambiguous": 0,
+  "fields": [
+    {
+      "type": "volume",
+      "raw_value": "20",
+      "written_unit": "L",
+      "true_unit": "milliliter",
+      "reagent": "DCM",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 1,
+      "written_text": "Added 20 L of DCM"
+    },
+    {
+      "type": "time",
+      "raw_value": "5",
+      "written_unit": "h",
+      "true_unit": "minute",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 2,
+      "written_text": "Heated for 5 h"
+    },
+    {
+      "type": "mass",
+      "raw_value": "2",
+      "written_unit": "kg",
+      "true_unit": "gram",
+      "reagent": "H2SO4",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 3,
+      "written_text": "Weighed 2 kg H2SO4"
+    },
+    {
+      "type": "temperature",
+      "raw_value": "100",
+      "written_unit": "\u00b0C",
+      "true_unit": "celsius",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "Held to 100 \u00b0C"
+    }
+  ]
+}

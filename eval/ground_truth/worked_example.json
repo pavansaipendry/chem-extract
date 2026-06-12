@@ -1,0 +1,44 @@
+{
+  "image": "eval/images/worked_example.png",
+  "observations": [
+    {
+      "quantity_type": "temperature",
+      "value": "70",
+      "unit": null,
+      "expect_flag": true,
+      "note": "no unit written — must be flagged, never guessed"
+    },
+    {
+      "quantity_type": "time",
+      "value": "30",
+      "unit": "min",
+      "expect_flag": false
+    },
+    {
+      "quantity_type": null,
+      "value": "5",
+      "unit": null,
+      "expect_flag": true,
+      "note": "5 mL? 5 g? 5%? quantity_type itself is ambiguous — type not checked"
+    },
+    {
+      "quantity_type": "ph",
+      "value": "7",
+      "unit": null,
+      "expect_flag": false,
+      "note": "pH is unitless; unit null is correct, not a flag"
+    },
+    {
+      "quantity_type": "volume",
+      "value": "250",
+      "unit": "mL",
+      "expect_flag": false
+    },
+    {
+      "quantity_type": "temperature",
+      "value": "25",
+      "unit": "C",
+      "expect_flag": false
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "image_id": "chem_0166",
+  "experiment": "Expt 77",
+  "font": "Kalam.ttf",
+  "n_fields": 4,
+  "n_ambiguous": 0,
+  "fields": [
+    {
+      "type": "time",
+      "raw_value": "20",
+      "written_unit": "h",
+      "true_unit": "minute",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 1,
+      "written_text": "Refluxed for 20 h"
+    },
+    {
+      "type": "temperature",
+      "raw_value": "150",
+      "written_unit": "degC",
+      "true_unit": "celsius",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 2,
+      "written_text": "Heated to 150 degC"
+    },
+    {
+      "type": "volume",
+      "raw_value": "2",
+      "written_unit": "L",
+      "true_unit": "milliliter",
+      "reagent": "NaCl",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 3,
+      "written_text": "Added 2 L of NaCl"
+    },
+    {
+      "type": "mass",
+      "raw_value": "0.25",
+      "written_unit": "kg",
+      "true_unit": "gram",
+      "reagent": "acetone",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "Weighed 0.25 kg acetone"
+    }
+  ]
+}

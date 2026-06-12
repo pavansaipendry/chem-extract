@@ -1,0 +1,62 @@
+{
+  "image_id": "chem_0046",
+  "experiment": "Expt 58",
+  "font": "ArchitectsDaughter.ttf",
+  "n_fields": 5,
+  "n_ambiguous": 1,
+  "fields": [
+    {
+      "type": "mass",
+      "raw_value": "2",
+      "written_unit": "g",
+      "true_unit": "gram",
+      "reagent": "NaCl",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 1,
+      "written_text": "Weighed 2 g NaCl"
+    },
+    {
+      "type": "yield",
+      "raw_value": "93",
+      "written_unit": null,
+      "true_unit": "percent",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 2,
+      "written_text": "yield 93"
+    },
+    {
+      "type": "concentration",
+      "raw_value": "0.5",
+      "written_unit": "mmol",
+      "true_unit": "molar",
+      "reagent": "NaOH",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 3,
+      "written_text": "0.5 mmol NaOH soln"
+    },
+    {
+      "type": "volume",
+      "raw_value": "5",
+      "written_unit": "mL",
+      "true_unit": "milliliter",
+      "reagent": "MeOH",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "Added 5 mL of MeOH"
+    },
+    {
+      "type": "ph",
+      "raw_value": "9",
+      "written_unit": null,
+      "true_unit": "dimensionless",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 5,
+      "written_text": "adjusted pH to 9"
+    }
+  ]
+}

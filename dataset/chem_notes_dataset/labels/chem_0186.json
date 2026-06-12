@@ -1,0 +1,49 @@
+{
+  "image_id": "chem_0186",
+  "experiment": "Expt 51",
+  "font": "GloriaHallelujah.ttf",
+  "n_fields": 4,
+  "n_ambiguous": 1,
+  "fields": [
+    {
+      "type": "ph",
+      "raw_value": "6",
+      "written_unit": null,
+      "true_unit": "dimensionless",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 1,
+      "written_text": "adjusted pH to 6"
+    },
+    {
+      "type": "yield",
+      "raw_value": "55",
+      "written_unit": "%",
+      "true_unit": "percent",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 2,
+      "written_text": "yield 55%"
+    },
+    {
+      "type": "time",
+      "raw_value": "20",
+      "written_unit": null,
+      "true_unit": "minute",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 3,
+      "written_text": "Refluxed for 20"
+    },
+    {
+      "type": "temperature",
+      "raw_value": "0",
+      "written_unit": "\u00b0C",
+      "true_unit": "celsius",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "Heated to 0 \u00b0C"
+    }
+  ]
+}

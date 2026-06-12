@@ -1,0 +1,72 @@
+{
+  "image_id": "chem_0081",
+  "experiment": "Expt 33",
+  "font": "ArchitectsDaughter.ttf",
+  "n_fields": 6,
+  "n_ambiguous": 3,
+  "fields": [
+    {
+      "type": "mass",
+      "raw_value": "0.5",
+      "written_unit": null,
+      "true_unit": "gram",
+      "reagent": "MeOH",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 1,
+      "written_text": "Weighed 0.5 MeOH"
+    },
+    {
+      "type": "yield",
+      "raw_value": "42",
+      "written_unit": null,
+      "true_unit": "percent",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 2,
+      "written_text": "yield 42"
+    },
+    {
+      "type": "temperature",
+      "raw_value": "-10",
+      "written_unit": "C",
+      "true_unit": "celsius",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 3,
+      "written_text": "Cooled to -10 C"
+    },
+    {
+      "type": "volume",
+      "raw_value": "5",
+      "written_unit": null,
+      "true_unit": "milliliter",
+      "reagent": "THF",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 4,
+      "written_text": "Added 5 of THF"
+    },
+    {
+      "type": "ph",
+      "raw_value": "3",
+      "written_unit": null,
+      "true_unit": "dimensionless",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 5,
+      "written_text": "adjusted pH to 3"
+    },
+    {
+      "type": "concentration",
+      "raw_value": "12",
+      "written_unit": "M",
+      "true_unit": "molar",
+      "reagent": "HCl",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 6,
+      "written_text": "12 M HCl soln"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "image_id": "chem_0165",
+  "experiment": "Expt 41",
+  "font": "Caveat.ttf",
+  "n_fields": 6,
+  "n_ambiguous": 2,
+  "fields": [
+    {
+      "type": "ph",
+      "raw_value": "5",
+      "written_unit": null,
+      "true_unit": "dimensionless",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 1,
+      "written_text": "adjusted pH to 5"
+    },
+    {
+      "type": "temperature",
+      "raw_value": "60",
+      "written_unit": "\u00b0C",
+      "true_unit": "celsius",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 2,
+      "written_text": "Cooled to 60 \u00b0C"
+    },
+    {
+      "type": "yield",
+      "raw_value": "93",
+      "written_unit": "%",
+      "true_unit": "percent",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 3,
+      "written_text": "yield 93%"
+    },
+    {
+      "type": "mass",
+      "raw_value": "10",
+      "written_unit": "kg",
+      "true_unit": "gram",
+      "reagent": "HCl",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "Weighed 10 kg HCl"
+    },
+    {
+      "type": "volume",
+      "raw_value": "1",
+      "written_unit": null,
+      "true_unit": "milliliter",
+      "reagent": "H2SO4",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 5,
+      "written_text": "Added 1 of H2SO4"
+    },
+    {
+      "type": "concentration",
+      "raw_value": "0.25",
+      "written_unit": null,
+      "true_unit": "molar",
+      "reagent": "NaOH",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 6,
+      "written_text": "0.25 NaOH soln"
+    }
+  ]
+}

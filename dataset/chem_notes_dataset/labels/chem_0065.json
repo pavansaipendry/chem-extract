@@ -1,0 +1,61 @@
+{
+  "image_id": "chem_0065",
+  "experiment": "Expt 99",
+  "font": "Kalam.ttf",
+  "n_fields": 5,
+  "n_ambiguous": 1,
+  "fields": [
+    {
+      "type": "temperature",
+      "raw_value": "150",
+      "written_unit": "C",
+      "true_unit": "celsius",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 1,
+      "written_text": "Held to 150 C"
+    },
+    {
+      "type": "volume",
+      "raw_value": "25",
+      "written_unit": "mL",
+      "true_unit": "milliliter",
+      "reagent": "EtOH",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 2,
+      "written_text": "Added 25 mL of EtOH"
+    },
+    {
+      "type": "ph",
+      "raw_value": "8",
+      "written_unit": null,
+      "true_unit": "dimensionless",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 3,
+      "written_text": "adjusted pH to 8"
+    },
+    {
+      "type": "mass",
+      "raw_value": "5",
+      "written_unit": null,
+      "true_unit": "gram",
+      "reagent": "AcOH",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 4,
+      "written_text": "Weighed 5 AcOH"
+    },
+    {
+      "type": "yield",
+      "raw_value": "55",
+      "written_unit": "%",
+      "true_unit": "percent",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 5,
+      "written_text": "yield 55%"
+    }
+  ]
+}

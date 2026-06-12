@@ -1,0 +1,72 @@
+{
+  "image_id": "chem_0152",
+  "experiment": "Expt 20",
+  "font": "Caveat.ttf",
+  "n_fields": 6,
+  "n_ambiguous": 1,
+  "fields": [
+    {
+      "type": "mass",
+      "raw_value": "5",
+      "written_unit": null,
+      "true_unit": "gram",
+      "reagent": "MeOH",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 1,
+      "written_text": "Weighed 5 MeOH"
+    },
+    {
+      "type": "concentration",
+      "raw_value": "0.25",
+      "written_unit": "mmol",
+      "true_unit": "molar",
+      "reagent": "H2SO4",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 2,
+      "written_text": "0.25 mmol H2SO4 soln"
+    },
+    {
+      "type": "volume",
+      "raw_value": "5",
+      "written_unit": "L",
+      "true_unit": "milliliter",
+      "reagent": "DMF",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 3,
+      "written_text": "Added 5 L of DMF"
+    },
+    {
+      "type": "time",
+      "raw_value": "3",
+      "written_unit": "sec",
+      "true_unit": "minute",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "Heated for 3 sec"
+    },
+    {
+      "type": "temperature",
+      "raw_value": "70",
+      "written_unit": "C",
+      "true_unit": "celsius",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 5,
+      "written_text": "Heated to 70 C"
+    },
+    {
+      "type": "ph",
+      "raw_value": "7",
+      "written_unit": null,
+      "true_unit": "dimensionless",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 6,
+      "written_text": "adjusted pH to 7"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "image_id": "chem_0155",
+  "experiment": "Expt 36",
+  "font": "GloriaHallelujah.ttf",
+  "n_fields": 4,
+  "n_ambiguous": 1,
+  "fields": [
+    {
+      "type": "ph",
+      "raw_value": "12",
+      "written_unit": null,
+      "true_unit": "dimensionless",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 1,
+      "written_text": "adjusted pH to 12"
+    },
+    {
+      "type": "time",
+      "raw_value": "60",
+      "written_unit": "sec",
+      "true_unit": "minute",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 2,
+      "written_text": "Heated for 60 sec"
+    },
+    {
+      "type": "concentration",
+      "raw_value": "0.05",
+      "written_unit": null,
+      "true_unit": "molar",
+      "reagent": "NaCl",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 3,
+      "written_text": "0.05 NaCl soln"
+    },
+    {
+      "type": "yield",
+      "raw_value": "93",
+      "written_unit": "%",
+      "true_unit": "percent",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "yield 93%"
+    }
+  ]
+}

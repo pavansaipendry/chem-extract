@@ -1,0 +1,61 @@
+{
+  "image_id": "chem_0037",
+  "experiment": "Expt 17",
+  "font": "Caveat.ttf",
+  "n_fields": 5,
+  "n_ambiguous": 0,
+  "fields": [
+    {
+      "type": "volume",
+      "raw_value": "15",
+      "written_unit": "mL",
+      "true_unit": "milliliter",
+      "reagent": "acetone",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 1,
+      "written_text": "Added 15 mL of acetone"
+    },
+    {
+      "type": "temperature",
+      "raw_value": "4",
+      "written_unit": "degC",
+      "true_unit": "celsius",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 2,
+      "written_text": "Held to 4 degC"
+    },
+    {
+      "type": "yield",
+      "raw_value": "78",
+      "written_unit": "%",
+      "true_unit": "percent",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 3,
+      "written_text": "yield 78%"
+    },
+    {
+      "type": "concentration",
+      "raw_value": "0.25",
+      "written_unit": "M",
+      "true_unit": "molar",
+      "reagent": "AgNO3",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "0.25 M AgNO3 soln"
+    },
+    {
+      "type": "ph",
+      "raw_value": "3",
+      "written_unit": null,
+      "true_unit": "dimensionless",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 5,
+      "written_text": "adjusted pH to 3"
+    }
+  ]
+}

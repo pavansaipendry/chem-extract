@@ -1,0 +1,52 @@
+{
+  "image_id": "chem_0018",
+  "experiment": "Expt 24",
+  "font": "PatrickHand.ttf",
+  "n_fields": 4,
+  "n_ambiguous": 2,
+  "fields": [
+    {
+      "type": "volume",
+      "raw_value": "50",
+      "written_unit": "ml",
+      "true_unit": "milliliter",
+      "reagent": "THF",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 1,
+      "written_text": "Added 50 ml of THF"
+    },
+    {
+      "type": "mass",
+      "raw_value": "25",
+      "written_unit": null,
+      "true_unit": "gram",
+      "reagent": "MeOH",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 2,
+      "written_text": "Weighed 25 MeOH"
+    },
+    {
+      "type": "concentration",
+      "raw_value": "6",
+      "written_unit": "mol",
+      "true_unit": "molar",
+      "reagent": "NaOH",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 3,
+      "written_text": "6 mol NaOH soln"
+    },
+    {
+      "type": "temperature",
+      "raw_value": "70",
+      "written_unit": null,
+      "true_unit": "celsius",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 4,
+      "written_text": "Heated to 70"
+    }
+  ]
+}

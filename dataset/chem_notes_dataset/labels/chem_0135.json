@@ -1,0 +1,72 @@
+{
+  "image_id": "chem_0135",
+  "experiment": "Expt 70",
+  "font": "GloriaHallelujah.ttf",
+  "n_fields": 6,
+  "n_ambiguous": 4,
+  "fields": [
+    {
+      "type": "concentration",
+      "raw_value": "12",
+      "written_unit": null,
+      "true_unit": "molar",
+      "reagent": "NaCl",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 1,
+      "written_text": "12 NaCl soln"
+    },
+    {
+      "type": "time",
+      "raw_value": "90",
+      "written_unit": null,
+      "true_unit": "minute",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 2,
+      "written_text": "Stirred for 90"
+    },
+    {
+      "type": "volume",
+      "raw_value": "20",
+      "written_unit": null,
+      "true_unit": "milliliter",
+      "reagent": "EtOH",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 3,
+      "written_text": "Added 20 of EtOH"
+    },
+    {
+      "type": "mass",
+      "raw_value": "0.5",
+      "written_unit": "mg",
+      "true_unit": "gram",
+      "reagent": "THF",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "Weighed 0.5 mg THF"
+    },
+    {
+      "type": "temperature",
+      "raw_value": "150",
+      "written_unit": "C",
+      "true_unit": "celsius",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 5,
+      "written_text": "Held to 150 C"
+    },
+    {
+      "type": "yield",
+      "raw_value": "93",
+      "written_unit": null,
+      "true_unit": "percent",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 6,
+      "written_text": "yield 93"
+    }
+  ]
+}

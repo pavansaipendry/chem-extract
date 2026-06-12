@@ -1,0 +1,59 @@
+{
+  "source_image": "eval/images/hf_pdfs/hf_00.png",
+  "transcript": "SOLUTIONS\n\nSolution is a homogeneous mixture of two or more components.\nBinary solution has only two compounds.\nSolute + solvent ---> solution\n( excess )\n2 1\nA B\n\nThe physical state of the solvent the physical state of the solution.\n\nclassification of solution\n\non the basis of physical state of the solute and solvent, solution are of 9 types.\n\nNo. | Solute | Solvent | Nature of Solution | Example\n1 | Gas | Gas | Gas solution | O2 in N2\n2 | liquid | Gas | | chloroform in N2\n3 | Solid | Gas | | campher in N2\n4 | Gas | liquid | liquid Solution | Co2 in water\n5 | liquid | liquid | | Ethanol in water\n6 | Solid | liquid | | Sugar in water\n7 | Gas | Solid | Solid Solution | H2 in Pd\n8 | liquid | Solid | | Hg in Na\n9 | Solid | Solid | | Cu in Au",
+  "observations": [
+    {
+      "quantity_type": "other",
+      "value": "2",
+      "unit": null,
+      "quote": "2 1",
+      "confidence": 0.6,
+      "flags": [
+        "missing_unit",
+        "self_consistency_mismatch",
+        "low_confidence"
+      ],
+      "inferred": {
+        "unit": null,
+        "confidence": 0.95,
+        "reasoning": "The value '2' from the source quote '2 1' is not a measured physical quantity but appears to be a labeling annotation beneath 'Solute + solvent ---> solution (excess)' with markers 'A B' — likely denoting component numbers or labels (2 components, A and B) in a binary solution diagram. It is dimensionless and carries no associated unit. No unit inference is defensible here."
+      },
+      "needs_review": true
+    },
+    {
+      "quantity_type": "other",
+      "value": "1",
+      "unit": null,
+      "quote": "2 1",
+      "confidence": 0.6,
+      "flags": [
+        "missing_unit",
+        "self_consistency_mismatch",
+        "low_confidence"
+      ],
+      "inferred": {
+        "unit": null,
+        "confidence": 0.05,
+        "reasoning": "The flagged value '1' comes from the source quote '2 1', which appears alongside 'A B' in the context of labeling solution components (solute + solvent). These are not measurements with physical units — they are index labels or component identifiers (e.g., component 1 = A, component 2 = B) describing the parts of a binary solution. There is no quantity type or physical measurement associated with this value, and the document provides no unit context anywhere for such a label. No defensible unit can be inferred."
+      },
+      "needs_review": true
+    },
+    {
+      "quantity_type": "other",
+      "value": "9",
+      "unit": null,
+      "quote": "solution are of 9 types.",
+      "confidence": 0.9,
+      "flags": [
+        "missing_unit",
+        "self_consistency_mismatch"
+      ],
+      "inferred": {
+        "unit": null,
+        "confidence": 0.95,
+        "reasoning": "The value '9' refers to the number of types of solutions formed by combinations of solute and solvent physical states (3 solute states x 3 solvent states = 9 categories). This is a dimensionless count, not a physical quantity with units. No unit is applicable here."
+      },
+      "needs_review": true
+    }
+  ]
+}

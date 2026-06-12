@@ -1,0 +1,82 @@
+{
+  "image_id": "chem_0171",
+  "experiment": "Expt 45",
+  "font": "ArchitectsDaughter.ttf",
+  "n_fields": 7,
+  "n_ambiguous": 2,
+  "fields": [
+    {
+      "type": "yield",
+      "raw_value": "63",
+      "written_unit": "%",
+      "true_unit": "percent",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 1,
+      "written_text": "yield 63%"
+    },
+    {
+      "type": "ph",
+      "raw_value": "6",
+      "written_unit": null,
+      "true_unit": "dimensionless",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 2,
+      "written_text": "adjusted pH to 6"
+    },
+    {
+      "type": "concentration",
+      "raw_value": "0.25",
+      "written_unit": null,
+      "true_unit": "molar",
+      "reagent": "NaCl",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 3,
+      "written_text": "0.25 NaCl soln"
+    },
+    {
+      "type": "mass",
+      "raw_value": "10",
+      "written_unit": "kg",
+      "true_unit": "gram",
+      "reagent": "DMF",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "Weighed 10 kg DMF"
+    },
+    {
+      "type": "time",
+      "raw_value": "3",
+      "written_unit": "min",
+      "true_unit": "minute",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 5,
+      "written_text": "Heated for 3 min"
+    },
+    {
+      "type": "volume",
+      "raw_value": "100",
+      "written_unit": null,
+      "true_unit": "milliliter",
+      "reagent": "H2SO4",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 6,
+      "written_text": "Added 100 of H2SO4"
+    },
+    {
+      "type": "temperature",
+      "raw_value": "110",
+      "written_unit": "\u00b0C",
+      "true_unit": "celsius",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 7,
+      "written_text": "Heated to 110 \u00b0C"
+    }
+  ]
+}

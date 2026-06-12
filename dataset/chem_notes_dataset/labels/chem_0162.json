@@ -1,0 +1,62 @@
+{
+  "image_id": "chem_0162",
+  "experiment": "Expt 67",
+  "font": "PatrickHand.ttf",
+  "n_fields": 5,
+  "n_ambiguous": 0,
+  "fields": [
+    {
+      "type": "concentration",
+      "raw_value": "6",
+      "written_unit": "M",
+      "true_unit": "molar",
+      "reagent": "NaOH",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 1,
+      "written_text": "6 M NaOH soln"
+    },
+    {
+      "type": "ph",
+      "raw_value": "10",
+      "written_unit": null,
+      "true_unit": "dimensionless",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 2,
+      "written_text": "adjusted pH to 10"
+    },
+    {
+      "type": "temperature",
+      "raw_value": "25",
+      "written_unit": "\u00b0C",
+      "true_unit": "celsius",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 3,
+      "written_text": "Cooled to 25 \u00b0C"
+    },
+    {
+      "type": "volume",
+      "raw_value": "20",
+      "written_unit": "L",
+      "true_unit": "milliliter",
+      "reagent": "EtOH",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "Added 20 L of EtOH"
+    },
+    {
+      "type": "mass",
+      "raw_value": "2",
+      "written_unit": "mg",
+      "true_unit": "gram",
+      "reagent": "H2SO4",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 5,
+      "written_text": "Weighed 2 mg H2SO4"
+    }
+  ]
+}

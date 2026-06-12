@@ -1,0 +1,51 @@
+{
+  "image_id": "chem_0006",
+  "experiment": "Expt 81",
+  "font": "PatrickHand.ttf",
+  "n_fields": 4,
+  "n_ambiguous": 3,
+  "fields": [
+    {
+      "type": "mass",
+      "raw_value": "1.2",
+      "written_unit": null,
+      "true_unit": "gram",
+      "reagent": "AgNO3",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 1,
+      "written_text": "Weighed 1.2 AgNO3"
+    },
+    {
+      "type": "volume",
+      "raw_value": "100",
+      "written_unit": null,
+      "true_unit": "milliliter",
+      "reagent": "NaOH",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 2,
+      "written_text": "Added 100 of NaOH"
+    },
+    {
+      "type": "temperature",
+      "raw_value": "60",
+      "written_unit": null,
+      "true_unit": "celsius",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 3,
+      "written_text": "Heated to 60"
+    },
+    {
+      "type": "yield",
+      "raw_value": "55",
+      "written_unit": "%",
+      "true_unit": "percent",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "yield 55%"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "image_id": "chem_0181",
+  "experiment": "Expt 72",
+  "font": "ArchitectsDaughter.ttf",
+  "n_fields": 6,
+  "n_ambiguous": 1,
+  "fields": [
+    {
+      "type": "temperature",
+      "raw_value": "100",
+      "written_unit": "C",
+      "true_unit": "celsius",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 1,
+      "written_text": "Cooled to 100 C"
+    },
+    {
+      "type": "concentration",
+      "raw_value": "0.1",
+      "written_unit": "mmol",
+      "true_unit": "molar",
+      "reagent": "NaOH",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 2,
+      "written_text": "0.1 mmol NaOH soln"
+    },
+    {
+      "type": "yield",
+      "raw_value": "71",
+      "written_unit": "%",
+      "true_unit": "percent",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 3,
+      "written_text": "yield 71%"
+    },
+    {
+      "type": "volume",
+      "raw_value": "20",
+      "written_unit": "ml",
+      "true_unit": "milliliter",
+      "reagent": "HCl",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "Added 20 ml of HCl"
+    },
+    {
+      "type": "ph",
+      "raw_value": "4",
+      "written_unit": null,
+      "true_unit": "dimensionless",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 5,
+      "written_text": "adjusted pH to 4"
+    },
+    {
+      "type": "time",
+      "raw_value": "20",
+      "written_unit": null,
+      "true_unit": "minute",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 6,
+      "written_text": "Stirred for 20"
+    }
+  ]
+}

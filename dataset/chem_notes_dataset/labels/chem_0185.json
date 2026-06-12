@@ -1,0 +1,51 @@
+{
+  "image_id": "chem_0185",
+  "experiment": "Expt 2",
+  "font": "IndieFlower.ttf",
+  "n_fields": 4,
+  "n_ambiguous": 1,
+  "fields": [
+    {
+      "type": "ph",
+      "raw_value": "2",
+      "written_unit": null,
+      "true_unit": "dimensionless",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 1,
+      "written_text": "adjusted pH to 2"
+    },
+    {
+      "type": "concentration",
+      "raw_value": "1",
+      "written_unit": null,
+      "true_unit": "molar",
+      "reagent": "NaOH",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 2,
+      "written_text": "1 NaOH soln"
+    },
+    {
+      "type": "volume",
+      "raw_value": "15",
+      "written_unit": "ml",
+      "true_unit": "milliliter",
+      "reagent": "benzaldehyde",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 3,
+      "written_text": "Added 15 ml of benzaldehyde"
+    },
+    {
+      "type": "yield",
+      "raw_value": "63",
+      "written_unit": "%",
+      "true_unit": "percent",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "yield 63%"
+    }
+  ]
+}

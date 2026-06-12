@@ -1,0 +1,51 @@
+{
+  "image_id": "chem_0079",
+  "experiment": "Expt 81",
+  "font": "GloriaHallelujah.ttf",
+  "n_fields": 4,
+  "n_ambiguous": 1,
+  "fields": [
+    {
+      "type": "concentration",
+      "raw_value": "0.1",
+      "written_unit": "mol",
+      "true_unit": "molar",
+      "reagent": "AgNO3",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 1,
+      "written_text": "0.1 mol AgNO3 soln"
+    },
+    {
+      "type": "temperature",
+      "raw_value": "50",
+      "written_unit": "\u00b0C",
+      "true_unit": "celsius",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 2,
+      "written_text": "Cooled to 50 \u00b0C"
+    },
+    {
+      "type": "yield",
+      "raw_value": "90",
+      "written_unit": null,
+      "true_unit": "percent",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 3,
+      "written_text": "yield 90"
+    },
+    {
+      "type": "mass",
+      "raw_value": "2",
+      "written_unit": "kg",
+      "true_unit": "gram",
+      "reagent": "EtOH",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "Weighed 2 kg EtOH"
+    }
+  ]
+}

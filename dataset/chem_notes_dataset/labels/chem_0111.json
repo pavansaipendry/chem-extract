@@ -1,0 +1,61 @@
+{
+  "image_id": "chem_0111",
+  "experiment": "Expt 77",
+  "font": "Kalam.ttf",
+  "n_fields": 5,
+  "n_ambiguous": 1,
+  "fields": [
+    {
+      "type": "yield",
+      "raw_value": "63",
+      "written_unit": "%",
+      "true_unit": "percent",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 1,
+      "written_text": "yield 63%"
+    },
+    {
+      "type": "ph",
+      "raw_value": "11",
+      "written_unit": null,
+      "true_unit": "dimensionless",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 2,
+      "written_text": "adjusted pH to 11"
+    },
+    {
+      "type": "temperature",
+      "raw_value": "-78",
+      "written_unit": "C",
+      "true_unit": "celsius",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 3,
+      "written_text": "Heated to -78 C"
+    },
+    {
+      "type": "concentration",
+      "raw_value": "12",
+      "written_unit": null,
+      "true_unit": "molar",
+      "reagent": "AgNO3",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 4,
+      "written_text": "12 AgNO3 soln"
+    },
+    {
+      "type": "mass",
+      "raw_value": "2.5",
+      "written_unit": "kg",
+      "true_unit": "gram",
+      "reagent": "CuSO4",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 5,
+      "written_text": "Weighed 2.5 kg CuSO4"
+    }
+  ]
+}

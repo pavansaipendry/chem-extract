@@ -1,0 +1,72 @@
+{
+  "image_id": "chem_0113",
+  "experiment": "Expt 19",
+  "font": "Caveat.ttf",
+  "n_fields": 6,
+  "n_ambiguous": 3,
+  "fields": [
+    {
+      "type": "concentration",
+      "raw_value": "0.25",
+      "written_unit": null,
+      "true_unit": "molar",
+      "reagent": "NaCl",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 1,
+      "written_text": "0.25 NaCl soln"
+    },
+    {
+      "type": "mass",
+      "raw_value": "1.2",
+      "written_unit": null,
+      "true_unit": "gram",
+      "reagent": "aniline",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 2,
+      "written_text": "Weighed 1.2 aniline"
+    },
+    {
+      "type": "temperature",
+      "raw_value": "78",
+      "written_unit": "\u00b0C",
+      "true_unit": "celsius",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 3,
+      "written_text": "Cooled to 78 \u00b0C"
+    },
+    {
+      "type": "volume",
+      "raw_value": "2",
+      "written_unit": "mL",
+      "true_unit": "milliliter",
+      "reagent": "THF",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "Added 2 mL of THF"
+    },
+    {
+      "type": "yield",
+      "raw_value": "90",
+      "written_unit": null,
+      "true_unit": "percent",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 5,
+      "written_text": "yield 90"
+    },
+    {
+      "type": "ph",
+      "raw_value": "2",
+      "written_unit": null,
+      "true_unit": "dimensionless",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 6,
+      "written_text": "adjusted pH to 2"
+    }
+  ]
+}

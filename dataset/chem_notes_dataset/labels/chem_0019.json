@@ -1,0 +1,49 @@
+{
+  "image_id": "chem_0019",
+  "experiment": "Expt 30",
+  "font": "PatrickHand.ttf",
+  "n_fields": 4,
+  "n_ambiguous": 0,
+  "fields": [
+    {
+      "type": "ph",
+      "raw_value": "5",
+      "written_unit": null,
+      "true_unit": "dimensionless",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 1,
+      "written_text": "adjusted pH to 5"
+    },
+    {
+      "type": "time",
+      "raw_value": "3",
+      "written_unit": "sec",
+      "true_unit": "minute",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 2,
+      "written_text": "Heated for 3 sec"
+    },
+    {
+      "type": "yield",
+      "raw_value": "55",
+      "written_unit": "%",
+      "true_unit": "percent",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 3,
+      "written_text": "yield 55%"
+    },
+    {
+      "type": "temperature",
+      "raw_value": "100",
+      "written_unit": "\u00b0C",
+      "true_unit": "celsius",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "Held to 100 \u00b0C"
+    }
+  ]
+}

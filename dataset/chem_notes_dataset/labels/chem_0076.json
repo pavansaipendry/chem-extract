@@ -1,0 +1,62 @@
+{
+  "image_id": "chem_0076",
+  "experiment": "Expt 47",
+  "font": "ArchitectsDaughter.ttf",
+  "n_fields": 5,
+  "n_ambiguous": 2,
+  "fields": [
+    {
+      "type": "temperature",
+      "raw_value": "60",
+      "written_unit": "\u00b0C",
+      "true_unit": "celsius",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 1,
+      "written_text": "Heated to 60 \u00b0C"
+    },
+    {
+      "type": "concentration",
+      "raw_value": "6",
+      "written_unit": null,
+      "true_unit": "molar",
+      "reagent": "NaOH",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 2,
+      "written_text": "6 NaOH soln"
+    },
+    {
+      "type": "mass",
+      "raw_value": "2",
+      "written_unit": null,
+      "true_unit": "gram",
+      "reagent": "NaCl",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 3,
+      "written_text": "Weighed 2 NaCl"
+    },
+    {
+      "type": "volume",
+      "raw_value": "25",
+      "written_unit": "L",
+      "true_unit": "milliliter",
+      "reagent": "benzaldehyde",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "Added 25 L of benzaldehyde"
+    },
+    {
+      "type": "yield",
+      "raw_value": "55",
+      "written_unit": "%",
+      "true_unit": "percent",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 5,
+      "written_text": "yield 55%"
+    }
+  ]
+}

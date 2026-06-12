@@ -1,0 +1,82 @@
+{
+  "image_id": "chem_0049",
+  "experiment": "Expt 52",
+  "font": "ArchitectsDaughter.ttf",
+  "n_fields": 7,
+  "n_ambiguous": 3,
+  "fields": [
+    {
+      "type": "mass",
+      "raw_value": "1.2",
+      "written_unit": "g",
+      "true_unit": "gram",
+      "reagent": "NaHCO3",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 1,
+      "written_text": "Weighed 1.2 g NaHCO3"
+    },
+    {
+      "type": "concentration",
+      "raw_value": "12",
+      "written_unit": null,
+      "true_unit": "molar",
+      "reagent": "NaOH",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 2,
+      "written_text": "12 NaOH soln"
+    },
+    {
+      "type": "yield",
+      "raw_value": "63",
+      "written_unit": "%",
+      "true_unit": "percent",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 3,
+      "written_text": "yield 63%"
+    },
+    {
+      "type": "time",
+      "raw_value": "10",
+      "written_unit": null,
+      "true_unit": "minute",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 4,
+      "written_text": "Stirred for 10"
+    },
+    {
+      "type": "ph",
+      "raw_value": "5",
+      "written_unit": null,
+      "true_unit": "dimensionless",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 5,
+      "written_text": "adjusted pH to 5"
+    },
+    {
+      "type": "temperature",
+      "raw_value": "80",
+      "written_unit": "\u00b0C",
+      "true_unit": "celsius",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 6,
+      "written_text": "Held to 80 \u00b0C"
+    },
+    {
+      "type": "volume",
+      "raw_value": "25",
+      "written_unit": null,
+      "true_unit": "milliliter",
+      "reagent": "AgNO3",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 7,
+      "written_text": "Added 25 of AgNO3"
+    }
+  ]
+}

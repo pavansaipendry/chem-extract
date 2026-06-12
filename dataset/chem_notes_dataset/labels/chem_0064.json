@@ -1,0 +1,50 @@
+{
+  "image_id": "chem_0064",
+  "experiment": "Expt 14",
+  "font": "ArchitectsDaughter.ttf",
+  "n_fields": 4,
+  "n_ambiguous": 3,
+  "fields": [
+    {
+      "type": "volume",
+      "raw_value": "250",
+      "written_unit": null,
+      "true_unit": "milliliter",
+      "reagent": "acetone",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 1,
+      "written_text": "Added 250 of acetone"
+    },
+    {
+      "type": "yield",
+      "raw_value": "78",
+      "written_unit": null,
+      "true_unit": "percent",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 2,
+      "written_text": "yield 78"
+    },
+    {
+      "type": "temperature",
+      "raw_value": "0",
+      "written_unit": "degC",
+      "true_unit": "celsius",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 3,
+      "written_text": "Held to 0 degC"
+    },
+    {
+      "type": "time",
+      "raw_value": "10",
+      "written_unit": null,
+      "true_unit": "minute",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 4,
+      "written_text": "Heated for 10"
+    }
+  ]
+}

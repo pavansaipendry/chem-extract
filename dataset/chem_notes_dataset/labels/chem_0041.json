@@ -1,0 +1,50 @@
+{
+  "image_id": "chem_0041",
+  "experiment": "Expt 44",
+  "font": "Kalam.ttf",
+  "n_fields": 4,
+  "n_ambiguous": 2,
+  "fields": [
+    {
+      "type": "temperature",
+      "raw_value": "50",
+      "written_unit": null,
+      "true_unit": "celsius",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 1,
+      "written_text": "Held to 50"
+    },
+    {
+      "type": "yield",
+      "raw_value": "71",
+      "written_unit": "%",
+      "true_unit": "percent",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 2,
+      "written_text": "yield 71%"
+    },
+    {
+      "type": "mass",
+      "raw_value": "50",
+      "written_unit": null,
+      "true_unit": "gram",
+      "reagent": "DMF",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 3,
+      "written_text": "Weighed 50 DMF"
+    },
+    {
+      "type": "ph",
+      "raw_value": "12",
+      "written_unit": null,
+      "true_unit": "dimensionless",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "adjusted pH to 12"
+    }
+  ]
+}

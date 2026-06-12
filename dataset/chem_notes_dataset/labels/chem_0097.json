@@ -1,0 +1,50 @@
+{
+  "image_id": "chem_0097",
+  "experiment": "Expt 69",
+  "font": "GloriaHallelujah.ttf",
+  "n_fields": 4,
+  "n_ambiguous": 0,
+  "fields": [
+    {
+      "type": "volume",
+      "raw_value": "15",
+      "written_unit": "L",
+      "true_unit": "milliliter",
+      "reagent": "HCl",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 1,
+      "written_text": "Added 15 L of HCl"
+    },
+    {
+      "type": "yield",
+      "raw_value": "85",
+      "written_unit": "%",
+      "true_unit": "percent",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 2,
+      "written_text": "yield 85%"
+    },
+    {
+      "type": "ph",
+      "raw_value": "5",
+      "written_unit": null,
+      "true_unit": "dimensionless",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 3,
+      "written_text": "adjusted pH to 5"
+    },
+    {
+      "type": "time",
+      "raw_value": "90",
+      "written_unit": "sec",
+      "true_unit": "minute",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "Refluxed for 90 sec"
+    }
+  ]
+}

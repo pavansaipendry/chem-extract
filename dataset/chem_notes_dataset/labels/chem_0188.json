@@ -1,0 +1,50 @@
+{
+  "image_id": "chem_0188",
+  "experiment": "Expt 8",
+  "font": "IndieFlower.ttf",
+  "n_fields": 4,
+  "n_ambiguous": 0,
+  "fields": [
+    {
+      "type": "yield",
+      "raw_value": "90",
+      "written_unit": "%",
+      "true_unit": "percent",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 1,
+      "written_text": "yield 90%"
+    },
+    {
+      "type": "volume",
+      "raw_value": "15",
+      "written_unit": "mL",
+      "true_unit": "milliliter",
+      "reagent": "MeOH",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 2,
+      "written_text": "Added 15 mL of MeOH"
+    },
+    {
+      "type": "time",
+      "raw_value": "30",
+      "written_unit": "h",
+      "true_unit": "minute",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 3,
+      "written_text": "Refluxed for 30 h"
+    },
+    {
+      "type": "ph",
+      "raw_value": "12",
+      "written_unit": null,
+      "true_unit": "dimensionless",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "adjusted pH to 12"
+    }
+  ]
+}

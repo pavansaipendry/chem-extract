@@ -1,0 +1,61 @@
+{
+  "image_id": "chem_0103",
+  "experiment": "Expt 37",
+  "font": "Kalam.ttf",
+  "n_fields": 5,
+  "n_ambiguous": 2,
+  "fields": [
+    {
+      "type": "yield",
+      "raw_value": "55",
+      "written_unit": "%",
+      "true_unit": "percent",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 1,
+      "written_text": "yield 55%"
+    },
+    {
+      "type": "time",
+      "raw_value": "90",
+      "written_unit": "sec",
+      "true_unit": "minute",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 2,
+      "written_text": "Stirred for 90 sec"
+    },
+    {
+      "type": "mass",
+      "raw_value": "2.5",
+      "written_unit": null,
+      "true_unit": "gram",
+      "reagent": "KMnO4",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 3,
+      "written_text": "Weighed 2.5 KMnO4"
+    },
+    {
+      "type": "ph",
+      "raw_value": "10",
+      "written_unit": null,
+      "true_unit": "dimensionless",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "adjusted pH to 10"
+    },
+    {
+      "type": "volume",
+      "raw_value": "15",
+      "written_unit": null,
+      "true_unit": "milliliter",
+      "reagent": "DCM",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 5,
+      "written_text": "Added 15 of DCM"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "image_id": "chem_0184",
+  "experiment": "Expt 53",
+  "font": "PatrickHand.ttf",
+  "n_fields": 7,
+  "n_ambiguous": 3,
+  "fields": [
+    {
+      "type": "ph",
+      "raw_value": "6",
+      "written_unit": null,
+      "true_unit": "dimensionless",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 1,
+      "written_text": "adjusted pH to 6"
+    },
+    {
+      "type": "volume",
+      "raw_value": "2",
+      "written_unit": "ml",
+      "true_unit": "milliliter",
+      "reagent": "NaOH",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 2,
+      "written_text": "Added 2 ml of NaOH"
+    },
+    {
+      "type": "concentration",
+      "raw_value": "12",
+      "written_unit": "mmol",
+      "true_unit": "molar",
+      "reagent": "AgNO3",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 3,
+      "written_text": "12 mmol AgNO3 soln"
+    },
+    {
+      "type": "yield",
+      "raw_value": "63",
+      "written_unit": "%",
+      "true_unit": "percent",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "yield 63%"
+    },
+    {
+      "type": "mass",
+      "raw_value": "10",
+      "written_unit": null,
+      "true_unit": "gram",
+      "reagent": "HCl",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 5,
+      "written_text": "Weighed 10 HCl"
+    },
+    {
+      "type": "temperature",
+      "raw_value": "60",
+      "written_unit": null,
+      "true_unit": "celsius",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 6,
+      "written_text": "Heated to 60"
+    },
+    {
+      "type": "time",
+      "raw_value": "3",
+      "written_unit": null,
+      "true_unit": "minute",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 7,
+      "written_text": "Stirred for 3"
+    }
+  ]
+}

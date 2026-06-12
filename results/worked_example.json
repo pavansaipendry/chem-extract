@@ -1,0 +1,78 @@
+{
+  "source_image": "eval/images/worked_example.png",
+  "transcript": "Experiment 14 — NaCl addition trial\n\nHeated the mixture to 70 and held for 30 min.\nAdded 5 of NaCl solution. pH adjusted to 7.\nFinal volume 250 mL. Cooled to 25 C.",
+  "observations": [
+    {
+      "quantity_type": "temperature",
+      "value": "70",
+      "unit": null,
+      "quote": "Heated the mixture to 70 and held for 30 min.",
+      "confidence": 0.98,
+      "flags": [
+        "missing_unit"
+      ],
+      "inferred": {
+        "unit": "°C",
+        "confidence": 0.85,
+        "reasoning": "The document explicitly uses Celsius elsewhere ('Cooled to 25 C'), establishing Celsius as the temperature unit convention for this experiment. The flagged value of 70 is described as 'Heated the mixture to 70 and held for 30 min,' which is consistent with heating to 70 °C — a common bench-chemistry temperature. Kelvin is ruled out by the plausibility check (70 K is cryogenic, contradicting 'heated'). Fahrenheit (70 °F ≈ 21 °C) is physically possible but would not constitute 'heating' relative to the 25 C final cooling step, and conflicts with the document's established Celsius convention. Thus °C is the strongly favored inference."
+      },
+      "needs_review": true
+    },
+    {
+      "quantity_type": "time",
+      "value": "30",
+      "unit": "min",
+      "quote": "held for 30 min.",
+      "confidence": 0.98,
+      "flags": [],
+      "inferred": null,
+      "needs_review": false
+    },
+    {
+      "quantity_type": "volume",
+      "value": "5",
+      "unit": null,
+      "quote": "Added 5 of NaCl solution.",
+      "confidence": 0.97,
+      "flags": [
+        "missing_unit"
+      ],
+      "inferred": {
+        "unit": "mL",
+        "confidence": 0.7,
+        "reasoning": "The flagged value is a volume of NaCl solution added on a bench scale. The only other explicit volume in the document, the final volume of 250 mL, is given in milliliters, which suggests the experiment is conducted at the milliliter scale. Adding 5 mL to reach a final volume of 250 mL is physically consistent and typical for a bench trial. While 5 L is plausible in absolute terms, it is inconsistent with the 250 mL final volume, and 5 µL would be an unusually tiny addition for this context. Therefore mL is the most likely intended unit, though absent explicit labeling some residual ambiguity remains."
+      },
+      "needs_review": true
+    },
+    {
+      "quantity_type": "ph",
+      "value": "7",
+      "unit": null,
+      "quote": "pH adjusted to 7.",
+      "confidence": 0.98,
+      "flags": [],
+      "inferred": null,
+      "needs_review": false
+    },
+    {
+      "quantity_type": "volume",
+      "value": "250",
+      "unit": "mL",
+      "quote": "Final volume 250 mL.",
+      "confidence": 0.99,
+      "flags": [],
+      "inferred": null,
+      "needs_review": false
+    },
+    {
+      "quantity_type": "temperature",
+      "value": "25",
+      "unit": "C",
+      "quote": "Cooled to 25 C.",
+      "confidence": 0.98,
+      "flags": [],
+      "inferred": null,
+      "needs_review": false
+    }
+  ]
+}

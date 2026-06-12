@@ -1,0 +1,82 @@
+{
+  "image_id": "chem_0141",
+  "experiment": "Expt 47",
+  "font": "ArchitectsDaughter.ttf",
+  "n_fields": 7,
+  "n_ambiguous": 2,
+  "fields": [
+    {
+      "type": "temperature",
+      "raw_value": "0",
+      "written_unit": "C",
+      "true_unit": "celsius",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 1,
+      "written_text": "Cooled to 0 C"
+    },
+    {
+      "type": "time",
+      "raw_value": "2",
+      "written_unit": null,
+      "true_unit": "minute",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 2,
+      "written_text": "Heated for 2"
+    },
+    {
+      "type": "yield",
+      "raw_value": "78",
+      "written_unit": "%",
+      "true_unit": "percent",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 3,
+      "written_text": "yield 78%"
+    },
+    {
+      "type": "volume",
+      "raw_value": "2",
+      "written_unit": null,
+      "true_unit": "milliliter",
+      "reagent": "AgNO3",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 4,
+      "written_text": "Added 2 of AgNO3"
+    },
+    {
+      "type": "ph",
+      "raw_value": "4",
+      "written_unit": null,
+      "true_unit": "dimensionless",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 5,
+      "written_text": "adjusted pH to 4"
+    },
+    {
+      "type": "mass",
+      "raw_value": "0.05",
+      "written_unit": "g",
+      "true_unit": "gram",
+      "reagent": "LiAlH4",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 6,
+      "written_text": "Weighed 0.05 g LiAlH4"
+    },
+    {
+      "type": "concentration",
+      "raw_value": "0.25",
+      "written_unit": "mol",
+      "true_unit": "molar",
+      "reagent": "NaCl",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 7,
+      "written_text": "0.25 mol NaCl soln"
+    }
+  ]
+}

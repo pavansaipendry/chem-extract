@@ -1,0 +1,82 @@
+{
+  "image_id": "chem_0096",
+  "experiment": "Expt 54",
+  "font": "Caveat.ttf",
+  "n_fields": 7,
+  "n_ambiguous": 2,
+  "fields": [
+    {
+      "type": "temperature",
+      "raw_value": "110",
+      "written_unit": null,
+      "true_unit": "celsius",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 1,
+      "written_text": "Held to 110"
+    },
+    {
+      "type": "ph",
+      "raw_value": "7",
+      "written_unit": null,
+      "true_unit": "dimensionless",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 2,
+      "written_text": "adjusted pH to 7"
+    },
+    {
+      "type": "time",
+      "raw_value": "5",
+      "written_unit": "h",
+      "true_unit": "minute",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 3,
+      "written_text": "Stirred for 5 h"
+    },
+    {
+      "type": "mass",
+      "raw_value": "5",
+      "written_unit": "kg",
+      "true_unit": "gram",
+      "reagent": "DCM",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "Weighed 5 kg DCM"
+    },
+    {
+      "type": "volume",
+      "raw_value": "50",
+      "written_unit": "L",
+      "true_unit": "milliliter",
+      "reagent": "HCl",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 5,
+      "written_text": "Added 50 L of HCl"
+    },
+    {
+      "type": "concentration",
+      "raw_value": "2",
+      "written_unit": "mol",
+      "true_unit": "molar",
+      "reagent": "AgNO3",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 6,
+      "written_text": "2 mol AgNO3 soln"
+    },
+    {
+      "type": "yield",
+      "raw_value": "93",
+      "written_unit": null,
+      "true_unit": "percent",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 7,
+      "written_text": "yield 93"
+    }
+  ]
+}

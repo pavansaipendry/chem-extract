@@ -1,0 +1,84 @@
+{
+  "source_image": "eval/images/lambda_note.png",
+  "transcript": "UV-Vis analysis of sample B\n\nλmax = 540 nm  (main peak)\n\nmeasured A at λ 280\n\nsecond peak λ = 412 nm\n\nscan range 200 to 800 nm\n\nshoulder near 365",
+  "observations": [
+    {
+      "quantity_type": "wavelength",
+      "value": "540",
+      "unit": "nm",
+      "quote": "λmax = 540 nm  (main peak)",
+      "confidence": 0.99,
+      "flags": [],
+      "inferred": null,
+      "needs_review": false
+    },
+    {
+      "quantity_type": "wavelength",
+      "value": "280",
+      "unit": null,
+      "quote": "measured A at λ 280",
+      "confidence": 0.97,
+      "flags": [
+        "missing_unit"
+      ],
+      "inferred": {
+        "unit": "nm",
+        "confidence": 0.95,
+        "reasoning": "Every other wavelength in this UV-Vis document is expressed in nm (\\u03bbmax = 540 nm, 412 nm, scan range 200 to 800 nm). 280 falls naturally within the stated UV-Vis scan range of 200\\u2013800 nm and corresponds to a common protein/aromatic absorbance wavelength. The consistent use of nm throughout the document makes nm the overwhelmingly likely intended unit."
+      },
+      "needs_review": true
+    },
+    {
+      "quantity_type": "wavelength",
+      "value": "412",
+      "unit": "nm",
+      "quote": "second peak λ = 412 nm",
+      "confidence": 0.99,
+      "flags": [],
+      "inferred": null,
+      "needs_review": false
+    },
+    {
+      "quantity_type": "wavelength",
+      "value": "200",
+      "unit": null,
+      "quote": "scan range 200 to 800 nm",
+      "confidence": 0.98,
+      "flags": [
+        "missing_unit"
+      ],
+      "inferred": {
+        "unit": "nm",
+        "confidence": 0.97,
+        "reasoning": "The value 200 is part of the explicit phrase 'scan range 200 to 800 nm', where the unit 'nm' applies to both endpoints of the range. Every other wavelength in this UV-Vis document is given in nm (540 nm, 412 nm, 280, 365), and 200-800 nm is the standard UV-Vis scan range. The unit is essentially settled by the source quote itself."
+      },
+      "needs_review": true
+    },
+    {
+      "quantity_type": "wavelength",
+      "value": "800",
+      "unit": "nm",
+      "quote": "scan range 200 to 800 nm",
+      "confidence": 0.98,
+      "flags": [],
+      "inferred": null,
+      "needs_review": false
+    },
+    {
+      "quantity_type": "wavelength",
+      "value": "365",
+      "unit": null,
+      "quote": "shoulder near 365",
+      "confidence": 0.97,
+      "flags": [
+        "missing_unit"
+      ],
+      "inferred": {
+        "unit": "nm",
+        "confidence": 0.95,
+        "reasoning": "Every other wavelength in this UV-Vis document is expressed in nm (540 nm main peak, 412 nm second peak, 200-800 nm scan range), and the flagged value '365' is described as a shoulder, i.e. another spectral feature of the same kind. A shoulder near 365 nm falls naturally within the stated 200-800 nm scan range and the UV region, making nm the overwhelmingly likely intended unit."
+      },
+      "needs_review": true
+    }
+  ]
+}

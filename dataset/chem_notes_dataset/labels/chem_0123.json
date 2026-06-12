@@ -1,0 +1,72 @@
+{
+  "image_id": "chem_0123",
+  "experiment": "Expt 25",
+  "font": "GloriaHallelujah.ttf",
+  "n_fields": 6,
+  "n_ambiguous": 2,
+  "fields": [
+    {
+      "type": "temperature",
+      "raw_value": "78",
+      "written_unit": "degC",
+      "true_unit": "celsius",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 1,
+      "written_text": "Cooled to 78 degC"
+    },
+    {
+      "type": "concentration",
+      "raw_value": "12",
+      "written_unit": "mol",
+      "true_unit": "molar",
+      "reagent": "NaCl",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 2,
+      "written_text": "12 mol NaCl soln"
+    },
+    {
+      "type": "yield",
+      "raw_value": "42",
+      "written_unit": null,
+      "true_unit": "percent",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 3,
+      "written_text": "yield 42"
+    },
+    {
+      "type": "mass",
+      "raw_value": "0.5",
+      "written_unit": "g",
+      "true_unit": "gram",
+      "reagent": "THF",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "Weighed 0.5 g THF"
+    },
+    {
+      "type": "volume",
+      "raw_value": "1",
+      "written_unit": null,
+      "true_unit": "milliliter",
+      "reagent": "DMF",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 5,
+      "written_text": "Added 1 of DMF"
+    },
+    {
+      "type": "ph",
+      "raw_value": "7",
+      "written_unit": null,
+      "true_unit": "dimensionless",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 6,
+      "written_text": "adjusted pH to 7"
+    }
+  ]
+}

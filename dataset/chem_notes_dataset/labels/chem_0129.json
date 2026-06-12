@@ -1,0 +1,82 @@
+{
+  "image_id": "chem_0129",
+  "experiment": "Expt 5",
+  "font": "IndieFlower.ttf",
+  "n_fields": 7,
+  "n_ambiguous": 1,
+  "fields": [
+    {
+      "type": "yield",
+      "raw_value": "55",
+      "written_unit": "%",
+      "true_unit": "percent",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 1,
+      "written_text": "yield 55%"
+    },
+    {
+      "type": "temperature",
+      "raw_value": "0",
+      "written_unit": "C",
+      "true_unit": "celsius",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 2,
+      "written_text": "Cooled to 0 C"
+    },
+    {
+      "type": "time",
+      "raw_value": "60",
+      "written_unit": null,
+      "true_unit": "minute",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 3,
+      "written_text": "Heated for 60"
+    },
+    {
+      "type": "ph",
+      "raw_value": "5",
+      "written_unit": null,
+      "true_unit": "dimensionless",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "adjusted pH to 5"
+    },
+    {
+      "type": "mass",
+      "raw_value": "0.5",
+      "written_unit": "g",
+      "true_unit": "gram",
+      "reagent": "MeOH",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 5,
+      "written_text": "Weighed 0.5 g MeOH"
+    },
+    {
+      "type": "concentration",
+      "raw_value": "0.1",
+      "written_unit": "M",
+      "true_unit": "molar",
+      "reagent": "NaOH",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 6,
+      "written_text": "0.1 M NaOH soln"
+    },
+    {
+      "type": "volume",
+      "raw_value": "15",
+      "written_unit": "ml",
+      "true_unit": "milliliter",
+      "reagent": "DMF",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 7,
+      "written_text": "Added 15 ml of DMF"
+    }
+  ]
+}

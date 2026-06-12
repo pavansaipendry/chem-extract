@@ -1,0 +1,82 @@
+{
+  "image_id": "chem_0052",
+  "experiment": "Expt 51",
+  "font": "PatrickHand.ttf",
+  "n_fields": 7,
+  "n_ambiguous": 2,
+  "fields": [
+    {
+      "type": "volume",
+      "raw_value": "2",
+      "written_unit": "ml",
+      "true_unit": "milliliter",
+      "reagent": "CuSO4",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 1,
+      "written_text": "Added 2 ml of CuSO4"
+    },
+    {
+      "type": "temperature",
+      "raw_value": "95",
+      "written_unit": "\u00b0C",
+      "true_unit": "celsius",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 2,
+      "written_text": "Heated to 95 \u00b0C"
+    },
+    {
+      "type": "mass",
+      "raw_value": "0.25",
+      "written_unit": null,
+      "true_unit": "gram",
+      "reagent": "MeOH",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 3,
+      "written_text": "Weighed 0.25 MeOH"
+    },
+    {
+      "type": "time",
+      "raw_value": "2",
+      "written_unit": "h",
+      "true_unit": "minute",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 4,
+      "written_text": "Stirred for 2 h"
+    },
+    {
+      "type": "ph",
+      "raw_value": "8",
+      "written_unit": null,
+      "true_unit": "dimensionless",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 5,
+      "written_text": "adjusted pH to 8"
+    },
+    {
+      "type": "yield",
+      "raw_value": "93",
+      "written_unit": null,
+      "true_unit": "percent",
+      "unit_present": false,
+      "ambiguous": true,
+      "line": 6,
+      "written_text": "yield 93"
+    },
+    {
+      "type": "concentration",
+      "raw_value": "0.05",
+      "written_unit": "mol",
+      "true_unit": "molar",
+      "reagent": "NaCl",
+      "unit_present": true,
+      "ambiguous": false,
+      "line": 7,
+      "written_text": "0.05 mol NaCl soln"
+    }
+  ]
+}
