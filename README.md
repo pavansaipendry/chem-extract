@@ -65,10 +65,17 @@ image/PDF ─► vision extraction ×N ─► self-consistency check ─► dete
                  enforced, Claude)        reproduce get flagged)    checks — no LLM, pure fns)
                                                                           │
             human review ◄─ reconstruction ◄─ unit inference ◄─ flagged fields only
-              (web UI)        (canonical rewrite;  (full-document context +
-                               unresolved spans     physical plausibility table;
-                               shown as competing   never overwrites raw)
-                               interpretations)
+            (web UI: pick      (canonical rewrite;  (full-document context +
+             between competing  unresolved spans     physical plausibility table;
+             interpretations)   offered as choices)  never overwrites raw)
+                  │
+                  ▼
+            finalized document ─► RAG index (ChromaDB, local embeddings)
+                                       │
+                                       ▼
+                              "Ask your documents" — Q&A answered ONLY from
+                              indexed sources, with citations; the reviewed
+                              final version supersedes the raw transcript
 ```
 
 - **Self-consistency:** every page is read N times; observations that don't reproduce across
@@ -85,6 +92,55 @@ image/PDF ─► vision extraction ×N ─► self-consistency check ─► dete
   interpretations for a human to choose between — never silently picked.
 - **RAG layer** (`chemextract/rag.py`): reviewed documents are indexed into ChromaDB; questions
   are answered only from indexed sources, with citations, and refused otherwise.
+
+## One page, end to end
+
+What the web UI does with the note above, stage by stage:
+
+**1. Read.** Two independent vision passes produce a verbatim transcript. Observations that
+don't reproduce across passes get flagged (`self_consistency_mismatch`):
+
+> `Run #7 - recrystallization / dissolved 2.5 g KNO3 in 40 ml water / heated to 85, stirred
+> 15 min / added 0.5 HCl dropwise -> pH 3 / cooled in ice bath to 5 c, 45 min / yield: 1.8`
+
+**2. Validate.** Pure functions, no LLM: `85` has no unit → flagged. `0.5 HCl` has no unit →
+flagged. `1.8` yield has no unit → flagged. `pH 3` is unitless by nature → clean. `5 c` parses
+and sits in range → clean.
+
+**3. Suggest.** For each flagged field only, a second LLM pass proposes a unit — grounded by
+the deterministic plausibility table and labeled with confidence and reasoning (e.g. `85` →
+°C at 0.85: *"the document writes '5 c' elsewhere; 85 K = −188 °C is not 'heating'"*).
+
+**4. Human review.** Spans the system can't settle on chemistry grounds are presented as
+competing interpretations to choose between — e.g. `yield: 1.8` → **1.8 g** (matches the
+2.5 g input scale, ~72% mass recovery) vs **1.8 %** (implausibly low for a recrystallization).
+The reviewer picks; the system never silently decides.
+
+**5. Final document.** A fully-specified rewrite with every insertion visibly marked:
+
+> `heated to 85 [°C], stirred 15 min / added 0.5 [ml] HCl dropwise → pH 3 / cooled in ice
+> bath to 5 [°C], 45 min / yield: 1.8 [g]`
+
+**6. Ask.** The finalized version is indexed (replacing the raw pre-review chunks), and the
+chat panel answers questions strictly from indexed documents, with citations — *"what
+temperature was the mixture heated to?"* → *"85 °C (unit inferred, human-confirmed)."*
+Off-topic questions are refused.
+
+### What that page cost
+
+Running the full pipeline on the page above (2 vision passes + 3 unit inferences +
+1 reconstruction, Claude Opus 4.8 at $5/M input, $25/M output):
+
+| | Calls | Input tok | Output tok |
+|---|---|---|---|
+| Vision extraction | 2 | ~3,400 | ~1,400 |
+| Unit inference | 3 | ~2,000 | ~600 |
+| Reconstruction | 1 | ~1,000 | ~500 |
+| **Total** | **6** | **~6,400** | **~2,500** |
+
+**≈ $0.10 per page.** Embeddings are local (sentence-transformers on CPU), so indexing is
+free; each chat question costs well under a cent. A scientist's hour costs more than a
+thousand of these pages.
 
 ## Evaluation
 
