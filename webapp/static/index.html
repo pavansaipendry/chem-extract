@@ -1149,10 +1149,12 @@ function finalize() {
   $('#finalsec').scrollIntoView({ behavior: 'smooth', block: 'start' });
   toast('Document finalized ✓');
 
-  // index the human-reviewed text — the highest-trust version — for Q&A
+  // index the human-reviewed text — the highest-trust version — for Q&A.
+  // Replaces the pre-review chunks for this document server-side.
   fetch('/rag/finalize', {
     method: 'POST', headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ source: file ? file.name : 'document', final_text: finalText }),
+    body: JSON.stringify({ source: file ? file.name : 'document', final_text: finalText,
+                           observations: currentObs }),
   }).then(r => r.json()).then(ragStatusUpdate).catch(() => {});
 }
 

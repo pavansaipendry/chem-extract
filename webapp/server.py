@@ -154,6 +154,7 @@ class AskRequest(BaseModel):
 class FinalizeRequest(BaseModel):
     source: str
     final_text: str
+    observations: list[dict] | None = None
 
 
 @app.post("/ask")
@@ -168,9 +169,14 @@ async def ask(req: AskRequest):
 
 @app.post("/rag/finalize")
 async def rag_finalize(req: FinalizeRequest):
-    """Index the human-reviewed final text — the highest-trust version."""
-    n = rag.ingest_document(doc_id=req.source + "::final", source=req.source,
-                            final_text=req.final_text)
+    """Index the human-reviewed final text — the highest-trust version.
+
+    Same doc_id as the extraction-time ingest, so the pre-review transcript and
+    machine-corrected chunks are REPLACED: after review, Q&A answers from the
+    reviewed document, not the raw read."""
+    n = rag.ingest_document(doc_id=req.source, source=req.source,
+                            final_text=req.final_text,
+                            observations=req.observations)
     return {"chunks": n, **rag.status()}
 
 
