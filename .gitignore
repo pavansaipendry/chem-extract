@@ -3,5 +3,8 @@ __pycache__/
 *.pyc
 .pytest_cache/
 .DS_Store
+.env
 rag_store/
 results/dataset/
+# private notebook run artifact (embeds page content) — keep out of git
+results/page57.json

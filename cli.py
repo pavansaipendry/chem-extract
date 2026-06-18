@@ -8,11 +8,14 @@ import json
 import sys
 from pathlib import Path
 
+from dotenv import load_dotenv
 from rich.console import Console
 from rich.table import Table
 
 from chemextract.pipeline import process_image
 from chemextract.schema import DocumentExtraction
+
+load_dotenv()  # pick up ANTHROPIC_API_KEY from a local .env (gitignored) if present
 
 RESULTS_DIR = Path(__file__).parent / "results"
 console = Console()
@@ -54,6 +57,49 @@ def render(doc: DocumentExtraction) -> None:
                 f"[dim]Inference for '{o.quote}': {o.inferred.unit} "
                 f"(conf {o.inferred.confidence:.2f}) — {o.inferred.reasoning}[/dim]"
             )
+
+    # --- L3: hand-drawn structures ---
+    if doc.structures:
+        stable = Table(title="Hand-drawn structures")
+        stable.add_column("Label")
+        stable.add_column("Identified as")
+        stable.add_column("Structure (SMILES)")
+        stable.add_column("Confirms")
+        stable.add_column("Flags")
+        for s in doc.structures:
+            style = "yellow" if s.needs_review else "green"
+            stable.add_row(
+                s.label or "—",
+                s.name or "[red]unidentified[/red]",
+                s.structure_smiles or "[red]∅[/red]",
+                str(s.confirmations),
+                ", ".join(s.flags) or "✓ trusted",
+                style=style,
+            )
+        console.print(stable)
+
+    # --- L4: experiment + deterministic calculation checks ---
+    if doc.experiment:
+        console.print(f"\n[bold]Experiment goal:[/bold] {doc.experiment.goal}")
+    if doc.calc_checks:
+        ctable = Table(title="Calculation verification (re-derived from inputs)")
+        ctable.add_column("Relation")
+        ctable.add_column("Formula")
+        ctable.add_column("Re-derived")
+        ctable.add_column("Page says")
+        ctable.add_column("Verdict")
+        for c in doc.calc_checks:
+            ok = c.agree
+            verdict = "✓ agrees" if ok else ("? " + ", ".join(c.flags) if ok is None else "✗ MISMATCH")
+            ctable.add_row(
+                c.relation,
+                c.formula or "—",
+                f"{c.recomputed:.4g}" if c.recomputed is not None else "—",
+                f"{c.stated:.4g}" if c.stated is not None else "—",
+                verdict,
+                style="green" if ok else "yellow",
+            )
+        console.print(ctable)
 
 
 def main() -> None:

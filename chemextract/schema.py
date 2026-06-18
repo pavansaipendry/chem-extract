@@ -9,6 +9,13 @@ from typing import Optional
 
 from pydantic import BaseModel, Field
 
+# structures.py / experiment.py import extract.py lazily, so importing their
+# result models here does not create a cycle (schema -> structures -> extract -> schema).
+from .experiment import CalcCheck, ExperimentRecord
+from .layout import PageLayout
+from .structures import StructureVerdict
+from .tables import Table
+
 
 class QuantityType(str, Enum):
     # core bench quantities
@@ -116,3 +123,12 @@ class DocumentExtraction(BaseModel):
     transcript: str
     observations: list[Observation]
     reconstruction: Optional[Reconstruction] = None
+    # L3: hand-drawn structures, recognised + cross-checked
+    structures: list[StructureVerdict] = []
+    # L4: reconstructed experiment + deterministic checks of its calculations
+    experiment: Optional[ExperimentRecord] = None
+    calc_checks: list[CalcCheck] = []
+    # genuine data tables on the page, read back into structured rows/columns
+    tables: list[Table] = []
+    # L5: spatial layout — diagrams/tables placed where they belong, reaction connectors restored
+    layout: Optional[PageLayout] = None

@@ -370,6 +370,44 @@
     border-left: 2px solid #e3b94f; padding: 2px 0 2px 11px; }
   .infer b { color: var(--amber); }
   .muted { color: var(--faint); }
+  /* rendered 2D structure drawing */
+  .structdraw {
+    display: inline-block; background: #fff; border: 1px solid var(--line);
+    border-radius: 10px; padding: 4px; box-shadow: var(--shadow-sm);
+  }
+  .structdraw svg { display: block; width: 220px; height: auto; }
+  /* structure drawing card — used inline in the final doc and in the leftover strip */
+  .sd {
+    display: inline-block; background: #fff; border: 1px solid var(--line);
+    border-radius: 12px; padding: 8px 8px 2px; box-shadow: var(--shadow-sm); text-align: center;
+  }
+  .sd svg { width: 190px; height: auto; display: block; }
+  .sd .cap { font: 600 11.5px var(--mono); color: var(--dim); padding: 4px 4px 6px; }
+  .sd.review { border-color: #efe0bd; }
+  .structgrid { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 16px; }
+  .fline { white-space: pre-wrap; }
+  .finline-struct { margin: 4px 0 12px; }
+  /* L5 layout: a horizontal reaction/diagram band — structures placed side by
+     side with the connectors ("+ e⁻", the arrow, "Li +") restored between them */
+  .diagram-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin: 8px 0 14px; }
+  .diagram-row .finline-struct { margin: 0; }
+  .diagram-row .sd svg { width: 150px; }
+  .diagram-op { font: 600 14px var(--mono); color: var(--ink); white-space: pre-wrap; }
+  /* experiment understanding: goal / conditions / procedure / results */
+  .exgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+  .excard { border: 1px solid var(--line); border-radius: var(--r); background: var(--card);
+    box-shadow: var(--shadow-sm); padding: 14px 16px; }
+  .excard h4 { margin: 0 0 8px; font-size: 11px; text-transform: uppercase; letter-spacing: .08em;
+    color: var(--faint); font-weight: 650; }
+  .exlist, .exsteps { margin: 0; padding-left: 18px; font-size: 13.5px; line-height: 1.55; }
+  .exsteps li { margin-bottom: 4px; }
+  .excond { font: 500 11.5px var(--mono); color: var(--green); background: var(--green-bg);
+    border-radius: 5px; padding: 0 5px; }
+  /* tables read off the page */
+  .tableblock { margin: 0 0 18px; }
+  .tableblock:last-child { margin-bottom: 0; }
+  .tbcap { font: 600 13px var(--mono); color: var(--dim); margin-bottom: 7px; }
+  #finaltext .tableblock { margin: 10px 0 14px; }
 
   /* corrected version */
   #canonical {
@@ -719,6 +757,32 @@
       </div>
     </div>
 
+    <div class="section" id="stsec" style="display:none">
+      <h2 style="margin-bottom:12px">Hand-drawn structures <span class="chip" id="stcount"></span></h2>
+      <div class="tablecard">
+        <table><thead><tr>
+          <th>Label</th><th>Identified as</th><th>Structure</th><th>Status</th>
+        </tr></thead><tbody id="strows"></tbody></table>
+      </div>
+    </div>
+
+    <div class="section" id="exsec" style="display:none">
+      <h2 style="margin-bottom:12px">What was actually happening <span class="chip">experiment reconstructed</span></h2>
+      <div id="exgoal" class="ready-note" style="margin-bottom:12px;display:none"></div>
+      <div id="exbody" class="exgrid"></div>
+      <h3 id="exchead" style="margin:18px 0 10px;display:none">Calculation check <span class="chip">re-derived from inputs</span></h3>
+      <div id="excheckcard" class="tablecard" style="display:none">
+        <table><thead><tr>
+          <th>Relation</th><th>Formula</th><th>Re-derived</th><th>Page says</th><th>Verdict</th>
+        </tr></thead><tbody id="exrows"></tbody></table>
+      </div>
+    </div>
+
+    <div class="section" id="tbsec" style="display:none">
+      <h2 style="margin-bottom:12px">Tables <span class="chip" id="tbcount"></span></h2>
+      <div id="tbbody"></div>
+    </div>
+
     <div class="section" id="tsec" style="display:none">
       <details class="transcript">
         <summary>Raw transcript — exactly what the system read</summary>
@@ -742,6 +806,7 @@
           </div>
         </div>
         <div id="finaltext"></div>
+        <div id="finalstructures"></div>
         <div class="final-actions">
           <button class="btn btn-primary" onclick="copyFinal()">Copy text</button>
           <button class="btn btn-ghost" onclick="downloadFinal('txt')">Download .txt</button>
@@ -834,7 +899,7 @@ function setFile(f) {
   $('#pginfo').textContent = '';
   $('#readynote').style.display = 'block';
   $('#pipesub').textContent = '';
-  ['#tsec','#rsec','#recsec','#finalsec'].forEach(s => $(s).style.display = 'none');
+  ['#tsec','#rsec','#stsec','#exsec','#tbsec','#recsec','#finalsec'].forEach(s => $(s).style.display = 'none');
   $('#finalizeBar').style.display = 'none';
   renderSteps(null, new Set());
 }
@@ -844,7 +909,11 @@ const STEPS = [
   ['reading', 'Reading'],
   ['validating', 'Validating'],
   ['inferring', 'Inferring units'],
+  ['structures', 'Structures'],
+  ['experiment', 'Experiment'],
+  ['tables', 'Tables'],
   ['reconstructing', 'Reconstructing'],
+  ['layout', 'Layout'],
   ['done', 'Done'],
 ];
 function renderSteps(activeKey, doneKeys) {
@@ -864,11 +933,11 @@ async function run() {
   if (!file) return;
   $('#go').disabled = true;
   $('#readynote').style.display = 'none';
-  ['#tsec', '#rsec', '#recsec', '#finalsec'].forEach(s => $(s).style.display = 'none');
+  ['#tsec', '#rsec', '#stsec', '#exsec', '#tbsec', '#recsec', '#finalsec'].forEach(s => $(s).style.display = 'none');
   $('#finalizeBar').style.display = 'none';
   $('#rows').innerHTML = '';
   $('#errbox').style.display = 'none';
-  choices = {}; currentRecon = null;
+  choices = {}; currentRecon = null; currentStructures = []; currentLayout = null; currentTables = [];
 
   const done = new Set();
   renderSteps('reading', done);
@@ -940,13 +1009,46 @@ function handle(ev, done) {
       currentObs[ev.index].inferred = ev.inferred;
       drawRows(currentObs);
       break;
+    case 'structures':
+      done.add('inferring'); renderSteps('structures', done);
+      pipesub('<span class="spin"></span>recognising hand-drawn structures…');
+      break;
+    case 'structures_done':
+      done.add('structures'); renderSteps('structures', done);
+      drawStructures(ev.structures || []);
+      break;
+    case 'experiment':
+      renderSteps('experiment', done);
+      pipesub('<span class="spin"></span>understanding experiment &amp; checking the math…');
+      break;
+    case 'experiment_done':
+      done.add('experiment'); renderSteps('experiment', done);
+      drawExperiment(ev.experiment || (ev.goal ? { goal: ev.goal } : null), ev.calc_checks || []);
+      break;
+    case 'tables':
+      done.add('experiment'); renderSteps('tables', done);
+      pipesub('<span class="spin"></span>reading tables off the page…');
+      break;
+    case 'tables_done':
+      done.add('tables'); renderSteps('tables', done);
+      drawTables(ev.tables || []);
+      break;
     case 'reconstructing':
-      done.add('inferring'); renderSteps('reconstructing', done);
+      done.add('inferring'); done.add('structures'); done.add('experiment'); done.add('tables');
+      renderSteps('reconstructing', done);
       pipesub('<span class="spin"></span>rebuilding corrected document…');
       break;
     case 'reconstructed':
       done.add('reconstructing'); renderSteps('reconstructing', done);
       drawReconstruction(ev.reconstruction);
+      break;
+    case 'laying_out':
+      done.add('reconstructing'); renderSteps('layout', done);
+      pipesub('<span class="spin"></span>placing diagrams &amp; restoring reaction parts…');
+      break;
+    case 'laid_out':
+      done.add('layout'); renderSteps('layout', done);
+      currentLayout = ev.layout || null;
       break;
     case 'indexing':
       pipesub('<span class="spin"></span>indexing for Q&amp;A…');
@@ -955,7 +1057,8 @@ function handle(ev, done) {
       if (ev.chunks) ragStatusUpdate(ev);
       break;
     case 'done':
-      done.add('inferring'); done.add('reconstructing'); done.add('done');
+      done.add('inferring'); done.add('structures'); done.add('experiment'); done.add('tables');
+      done.add('reconstructing'); done.add('layout'); done.add('done');
       renderSteps('done', done);
       pipesub('complete');
       currentObs = ev.observations;
@@ -999,6 +1102,128 @@ function drawRows(obs) {
       <td>${detail || '<span class="muted">—</span>'}</td>
     </tr>`;
   }).join('');
+}
+
+/* ---------------- L3: hand-drawn structures ---------------- */
+let currentStructures = [];
+let currentLayout = null;
+function drawStructures(structs) {
+  currentStructures = structs || [];
+  if (!structs.length) { $('#stsec').style.display = 'none'; return; }
+  $('#stcount').textContent = structs.length;
+  $('#strows').innerHTML = structs.map(s => {
+    const review = s.needs_review;
+    const flags = (s.flags || []).map(f => `<span class="flag">${esc(f)}</span>`).join('');
+    const status = review
+      ? `<span class="pill review">⚠ review</span> ${flags}`
+      : `<span class="pill clean">✓ trusted</span>`;
+    const drawing = s.svg
+      ? `<div class="structdraw">${s.svg}</div>`
+      : (s.structure_smiles ? '' : '<span class="novalue">∅</span>');
+    const smiles = s.structure_smiles
+      ? `<div class="val" style="font-size:11.5px;color:var(--dim);margin-top:6px;word-break:break-all">${esc(s.structure_smiles)}</div>`
+      : '';
+    return `<tr class="${review ? 'review' : 'clean'}">
+      <td>${s.label ? `<span class="val">${esc(s.label)}</span>` : '<span class="muted">—</span>'}</td>
+      <td>${s.name ? esc(s.name) : '<span class="novalue">unidentified</span>'}</td>
+      <td>${drawing}${smiles}</td>
+      <td>${status}<div class="muted" style="font-size:12px;margin-top:6px">${esc(s.note || '')}</div></td>
+    </tr>`;
+  }).join('');
+  $('#stsec').style.display = 'block';
+}
+
+/* ---------------- L4: experiment understanding + calculation verification ---------------- */
+function drawExperiment(record, checks) {
+  record = record || {};
+  const goal = record.goal;
+  if (goal) {
+    $('#exgoal').style.display = 'block';
+    $('#exgoal').innerHTML = `<b>Goal:</b> ${esc(goal)}`;
+  } else {
+    $('#exgoal').style.display = 'none';
+  }
+
+  // goal / conditions / procedure / results — what the experiment actually was
+  const conditions = record.conditions || [];
+  const procedure = record.procedure || [];
+  const results = record.results || [];
+  let body = '';
+  if (conditions.length) {
+    body += `<div class="excard"><h4>Conditions &amp; setup</h4><ul class="exlist">`
+      + conditions.map(c => `<li>${esc(c)}</li>`).join('') + `</ul></div>`;
+  }
+  if (procedure.length) {
+    body += `<div class="excard"><h4>Procedure</h4><ol class="exsteps">`
+      + procedure.map(p => `<li>${esc(p.action || '')}`
+          + ((p.conditions && p.conditions.length)
+              ? ` <span class="excond">${p.conditions.map(esc).join(' · ')}</span>` : '')
+          + `</li>`).join('')
+      + `</ol></div>`;
+  }
+  if (results.length) {
+    body += `<div class="excard"><h4>Results</h4><ul class="exlist">`
+      + results.map(r => `<li>${esc(r)}</li>`).join('') + `</ul></div>`;
+  }
+  if (record.notes) {
+    body += `<div class="excard"><h4>Notes</h4><div class="muted">${esc(record.notes)}</div></div>`;
+  }
+  $('#exbody').innerHTML = body;
+
+  // deterministic calculation re-derivation
+  const hasChecks = checks && checks.length;
+  $('#exchead').style.display = hasChecks ? 'block' : 'none';
+  $('#excheckcard').style.display = hasChecks ? 'block' : 'none';
+  if (hasChecks) {
+    $('#exrows').innerHTML = checks.map(c => {
+      const ok = c.agree;
+      const fmt = x => (x === null || x === undefined) ? '—' : Number(x).toPrecision(4);
+      const verdict = ok === true
+        ? '<span class="pill clean">✓ agrees</span>'
+        : ok === false
+          ? '<span class="pill review">✗ mismatch</span>'
+          : `<span class="flag">${esc((c.flags || []).join(', ') || 'n/a')}</span>`;
+      return `<tr class="${ok === false ? 'review' : 'clean'}">
+        <td><span class="val" style="font-size:12px">${esc(c.relation)}</span></td>
+        <td><span class="unitchip">${esc(c.formula || '—')}</span></td>
+        <td><span class="val">${fmt(c.recomputed)}</span></td>
+        <td><span class="val">${fmt(c.stated)}</span></td>
+        <td>${verdict}</td>
+      </tr>`;
+    }).join('');
+  }
+
+  if (goal || body || hasChecks) $('#exsec').style.display = 'block';
+  else $('#exsec').style.display = 'none';
+}
+
+/* ---------------- tables read off the page ---------------- */
+let currentTables = [];
+
+/* one extracted table -> an HTML <table> with caption, headers and verbatim cells */
+function tableHtml(t) {
+  const cols = t.columns || [];
+  const head = cols.length
+    ? `<thead><tr>${cols.map(c => `<th>${esc(c)}</th>`).join('')}</tr></thead>` : '';
+  const body = (t.rows || []).map(r => {
+    const cells = (r || []);
+    // pad short rows so the grid stays rectangular
+    const n = Math.max(cols.length, cells.length);
+    let tds = '';
+    for (let i = 0; i < n; i++) tds += `<td>${esc(cells[i] != null ? cells[i] : '')}</td>`;
+    return `<tr>${tds}</tr>`;
+  }).join('');
+  const cap = t.title ? `<div class="tbcap">${esc(t.title)}</div>` : '';
+  const note = t.note ? `<div class="muted" style="font-size:12px;margin-top:6px">${esc(t.note)}</div>` : '';
+  return `<div class="tableblock">${cap}<div class="tablecard"><table>${head}<tbody>${body}</tbody></table></div>${note}</div>`;
+}
+
+function drawTables(tables) {
+  currentTables = tables || [];
+  if (!currentTables.length) { $('#tbsec').style.display = 'none'; return; }
+  $('#tbcount').textContent = currentTables.length;
+  $('#tbbody').innerHTML = currentTables.map(tableHtml).join('');
+  $('#tbsec').style.display = 'block';
 }
 
 /* ---------------- reconstruction + review ---------------- */
@@ -1120,29 +1345,93 @@ function applyChoice(text, amb, chosen) {
   return text; // span not found even loosely — leave canonical untouched
 }
 
-function finalize() {
-  if (!currentRecon) return;
-  let text = currentRecon.canonical_text;
+/* apply the human's ambiguity choices to a span of canonical text, leaving the
+   \x00…\x01 markers in so the chosen spans render black. */
+function applyChoices(text) {
   unresolvedAmbs.forEach((a, ai) => {
     const it = a.interpretations[choices[ai]];
     if (it) text = applyChoice(text, a, it.text);
   });
+  return text;
+}
+
+const structCard = s => `<div class="finline-struct"><div class="sd ${s.needs_review ? 'review' : ''}">`
+  + `${s.svg || ''}<div class="cap">${esc(s.name || s.label || '')}${s.needs_review ? ' ⚠' : ''}</div></div></div>`;
+
+/* a horizontal diagram band from the layout: structures placed left→right with
+   the reaction connectors ("+ e⁻", the arrow + its voltage, "Li +") restored. */
+function renderDiagramRow(row, placed) {
+  const items = (row.items || []).map(it => {
+    if (it.kind === 'structure' && it.structure_index != null) {
+      const s = (currentStructures || [])[it.structure_index];
+      if (!s) return '';
+      placed.add(s.structure_smiles);
+      return structCard(s);
+    }
+    return it.text ? `<span class="diagram-op">${esc(it.text)}</span>` : '';
+  }).join('');
+  if (!items) return '';
+  return `<div class="diagram-row" style="padding-left:${(row.indent || 0) * 20}px">${items}</div>`;
+}
+
+function finalize() {
+  if (!currentRecon) return;
+  const text = applyChoices(currentRecon.canonical_text);
   finalText = text.replace(/[\x00\x01]/g, '').replace(/\[([^\]]*)\]/g, '$1');
 
-  // render: chemistry insertions green; the user's chosen spans marked + black chips
+  const drawn = (currentStructures || []).filter(s => s.svg);
+  const placed = new Set();                       // dedupe by structure_smiles
+  const placedTables = new Set();                 // table indices placed inline
   let html = '';
-  text.split('\x00').forEach((part, i) => {
-    if (i === 0) { html += markInsertions(part); return; }
-    const cut = part.indexOf('\x01');
-    const chosenPart = cut >= 0 ? part.slice(0, cut) : part;
-    const rest = cut >= 0 ? part.slice(cut + 1) : '';
-    html += `<span class="chosen-wrap">${markInsertions(chosenPart, 'chosen-ins')}</span>` + markInsertions(rest);
-  });
+
+  if (currentLayout && currentLayout.rows && currentLayout.rows.length) {
+    // L5 layout: render rows in page order — diagrams sit where they belong,
+    // reaction schemes read left→right with their connectors restored, and data
+    // tables are placed where they actually appear.
+    currentLayout.rows.forEach(row => {
+      if (row.kind === 'diagram') {
+        html += renderDiagramRow(row, placed);
+      } else if (row.kind === 'table') {
+        const t = (currentTables || [])[row.table_index];
+        if (t) { placedTables.add(row.table_index); html += tableHtml(t); }
+      } else {
+        const line = applyChoices(row.text || '');
+        html += `<div class="fline" style="padding-left:${(row.indent || 0) * 20}px">${renderFinalLine(line)}</div>`;
+      }
+    });
+  } else {
+    // fallback: no layout — walk the text and drop each drawing after the line
+    // that names it (every unique structure once).
+    text.split('\n').forEach(line => {
+      html += `<div class="fline">${renderFinalLine(line)}</div>`;
+      const lc = line.toLowerCase();
+      drawn.forEach(s => {
+        if (placed.has(s.structure_smiles)) return;
+        if (matchTokens(s).some(tok => tok && lc.includes(tok))) {
+          placed.add(s.structure_smiles);
+          html += structCard(s);
+        }
+      });
+    });
+  }
   $('#finaltext').innerHTML = html;
 
+  const leftover = drawn.filter(s => !placed.has(s.structure_smiles));
+  const leftoverTables = (currentTables || []).filter((t, i) => !placedTables.has(i));
+  $('#finalstructures').innerHTML = (leftover.length
+      ? `<h2 style="margin:22px 0 4px">Other structures <span class="chip">${leftover.length}</span></h2>`
+        + `<div class="structgrid">${leftover.map(structCard).join('')}</div>`
+      : '')
+    + (leftoverTables.length
+      ? `<h2 style="margin:22px 0 8px">Tables <span class="chip">${leftoverTables.length}</span></h2>`
+        + leftoverTables.map(tableHtml).join('')
+      : '');
+
   const n = unresolvedAmbs.length;
+  const fixes = currentLayout && currentLayout.corrections ? currentLayout.corrections.length : 0;
   $('#finalmeta').textContent =
     `${currentObs.length} quantities extracted · ${n} ambiguit${n === 1 ? 'y' : 'ies'} resolved by you · ` +
+    (fixes ? `${fixes} layout fix${fixes === 1 ? '' : 'es'} · ` : '') +
     `green = inserted by chemistry, black = your choice`;
   $('#finalsec').style.display = 'block';
   $('#finalizeBar').style.display = 'none';
@@ -1156,6 +1445,36 @@ function finalize() {
     body: JSON.stringify({ source: file ? file.name : 'document', final_text: finalText,
                            observations: currentObs }),
   }).then(r => r.json()).then(ragStatusUpdate).catch(() => {});
+}
+
+/* render one line of the final document, preserving the green chemistry
+   insertions and the black user-chosen spans (markers \x00…\x01). */
+function renderFinalLine(line) {
+  let h = '';
+  line.split('\x00').forEach((part, i) => {
+    if (i === 0) { h += markInsertions(part); return; }
+    const cut = part.indexOf('\x01');
+    const chosenPart = cut >= 0 ? part.slice(0, cut) : part;
+    const rest = cut >= 0 ? part.slice(cut + 1) : '';
+    h += `<span class="chosen-wrap">${markInsertions(chosenPart, 'chosen-ins')}</span>` + markInsertions(rest);
+  });
+  return h;
+}
+
+/* distinctive lowercase tokens that, if present in a line, mean this structure
+   is named there — derived from the verbatim page label and the identified name. */
+function matchTokens(s) {
+  const toks = new Set();
+  const grab = str => (String(str).toLowerCase().match(/\d+-crown-\d+|litfsi|diglyme|monoglyme|tetraglyme|tfsi/g) || [])
+    .forEach(t => toks.add(t));
+  if (s.label) { grab(s.label); }
+  if (s.name) {
+    grab(s.name);
+    const n = s.name.toLowerCase();
+    if (n.includes('imide')) toks.add('litfsi');   // "lithium bis(...)imide" ↔ "LiTFSI"
+    if (n.includes('crown')) toks.add('crown');
+  }
+  return [...toks];
 }
 
 /* ---------------- export ---------------- */
