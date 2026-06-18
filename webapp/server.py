@@ -13,16 +13,31 @@ from pathlib import Path
 
 import fitz  # PyMuPDF
 from anthropic import Anthropic
+from dotenv import load_dotenv
 from fastapi import FastAPI, UploadFile
 from fastapi.responses import FileResponse, StreamingResponse
 from pydantic import BaseModel
 
+# Read ANTHROPIC_API_KEY (and friends) from a local .env if present. Must run
+# before the module-level Anthropic() below picks the key up from the env.
+load_dotenv()
+
 from chemextract import rag
+from chemextract.experiment import analyze_experiment
 from chemextract.extract import extract_page
 from chemextract.infer import infer_unit
-from chemextract.pipeline import CONFIDENCE_THRESHOLD, _consistency_flags, _obs_key
+from chemextract.layout import refine_layout
+from chemextract.tables import extract_tables
+from chemextract.pipeline import (
+    CONFIDENCE_THRESHOLD,
+    _consistency_flags,
+    _obs_key,
+    _obs_summary,
+    _struct_summary,
+)
 from chemextract.reconstruct import reconstruct
 from chemextract.schema import DocumentExtraction, Observation
+from chemextract.structures import analyze_structures
 from chemextract.validate import validate_observation
 
 app = FastAPI()
@@ -100,12 +115,61 @@ def _stream_extract_inner(upload_path: str, n_runs: int, page: int, source_name:
             yield _event(stage="inferred", index=idx,
                          inferred=json.loads(obs.inferred.model_dump_json()))
 
+    # --- L3: recognise + cross-check the hand-drawn structures ---
+    yield _event(stage="structures")
+    structures = []
+    try:
+        structures = analyze_structures(image_path, transcript=primary.transcript, client=client)
+        yield _event(stage="structures_done",
+                     structures=[json.loads(s.model_dump_json()) for s in structures])
+    except Exception as e:  # structure recognition must never sink the rest
+        traceback.print_exc()
+        yield _event(stage="structures_done", structures=[], error=f"{type(e).__name__}: {e}")
+
+    # --- L4: understand the experiment + deterministically verify its calculations ---
+    # The page image grounds the reading (diagrams, schemes, layout), not just text.
+    yield _event(stage="experiment")
+    try:
+        record, checks = analyze_experiment(
+            primary.transcript,
+            observations_summary=_obs_summary(observations),
+            structures_summary=_struct_summary(structures),
+            image_path=image_path,
+            client=client)
+        yield _event(stage="experiment_done", goal=record.goal,
+                     experiment=json.loads(record.model_dump_json()),
+                     calc_checks=[json.loads(c.model_dump_json()) for c in checks])
+    except Exception as e:
+        traceback.print_exc()
+        yield _event(stage="experiment_done", goal=None, experiment=None, calc_checks=[],
+                     error=f"{type(e).__name__}: {e}")
+
+    # --- genuine data tables on the page, read back into structured rows/columns ---
+    yield _event(stage="tables")
+    tables = []
+    try:
+        tables = extract_tables(image_path, transcript=primary.transcript, client=client)
+        yield _event(stage="tables_done",
+                     tables=[json.loads(t.model_dump_json()) for t in tables])
+    except Exception as e:  # table extraction must never sink the rest
+        traceback.print_exc()
+        yield _event(stage="tables_done", tables=[], error=f"{type(e).__name__}: {e}")
+
     # --- chemistry-grounded reconstruction (corrected, fully-specified rewrite) ---
     yield _event(stage="reconstructing")
     doc = DocumentExtraction(source_image="upload", transcript=primary.transcript,
                              observations=observations)
     recon = reconstruct(doc, client=client)
     yield _event(stage="reconstructed", reconstruction=json.loads(recon.model_dump_json()))
+
+    # --- L5: place the diagrams in 2-D and restore the reaction connectors ---
+    yield _event(stage="laying_out")
+    try:
+        layout = refine_layout(image_path, recon.canonical_text, structures, tables=tables, client=client)
+        yield _event(stage="laid_out", layout=json.loads(layout.model_dump_json()))
+    except Exception as e:  # layout is a polish pass — never sink the extraction
+        traceback.print_exc()
+        yield _event(stage="laid_out", layout=None, error=f"{type(e).__name__}: {e}")
 
     # --- index into the RAG store so the document becomes queryable ---
     yield _event(stage="indexing")

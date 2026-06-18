@@ -1,0 +1,19 @@
+# Dependencies for the hand-drawn structure module (chemextract/structures.py).
+# Kept out of core requirements.txt: the name-resolution + convergence legs are
+# light, but the OCSR cross-check (DECIMER) drags in TensorFlow and is optional.
+#
+# Two reliable legs (the answer; install these to run everything except OCSR):
+#   pip install -r requirements-structures.txt
+rdkit>=2024.3        # SMILES -> InChIKey convergence, salt/charge normalisation
+py2opsin>=1.2        # systematic name -> SMILES (needs a JRE on PATH for OPSIN)
+#
+# Optional cross-check leg — DECIMER hand-drawn OCSR. Heavy (TensorFlow + a model
+# checkpoint fetched on first use). Only needed for `analyze_structures(..., run_ocsr=True)`.
+# It is the *fragile* leg by design: ruled lines / cartoon notation make it abstain,
+# which only flags a structure — it never decides the answer. Install separately:
+#   pip install decimer
+#
+# Notes:
+# - py2opsin runs OPSIN (a Java jar): a JRE must be on PATH.
+# - PubChem is the third name-resolution fallback and needs network; it degrades
+#   gracefully to "unresolved" (which flags for review) when offline.
